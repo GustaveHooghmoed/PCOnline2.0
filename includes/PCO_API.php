@@ -2134,6 +2134,11 @@ class article {
                 $like = 'like';
             }
             echo '
+                        <style>
+                        body {
+                        background-image: url(' . park::getBackrgound($mysqli, $row['park_id']) . '
+                        }
+                        </style>
                         <div class="hover" id="' . $post . '">
                             <div>
                                 <img class="avatar" src="' . $logo . '" alt=""/>
