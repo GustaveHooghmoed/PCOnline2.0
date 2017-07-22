@@ -1,0 +1,127 @@
+/*!
+ * Copyright (c) 2017 Daníque de Jong
+ */
+body {
+    transition: background 0.5s linear;
+    background-position: center;
+    background-size: 100% 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    color: black;
+}
+.right-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.spacing {
+    margin-top: 1.5em;
+}
+.shortcut {
+    font-size: 13px;
+}
+.shortcutlink {
+    text-decoration: none;
+}
+.navbar-inner {
+    background: #ffffff
+}
+.hover {
+     cursor: pointer;
+     cursor: hand;
+ }
+.avatar {
+    object-fit: cover;
+    border-radius:50%;
+    width: 50px;
+    height: 50px;
+}
+.error-border {
+    border-color:#843534;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483
+}
+.parkheader {
+    height: 20%;
+    width: 100%;
+}
+.notallowed:hover {
+    cursor:not-allowed;
+}
+.table {
+    table-layout:fixed;
+}
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.changelog {
+    border: 1px solid #aaa;
+    margin: 0 0.5em;
+    padding: 1em;
+    overflow-x: auto;
+    height: 20em;
+}
+ul.share-buttons{
+    list-style: none;
+    padding: 0;
+}
+
+ul.share-buttons li{
+    display: inline;
+}
+
+ul.share-buttons .sr-only {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+ul.share-buttons img{
+    width: 32px;
+}
+pre {
+    font-family: monospace;
+    background-color: #fff;
+    margin: 4em auto;
+    padding: 0.5em;
+    border-radius: .25em;
+    box-shadow: .1em .1em .5em rgba(0, 0, 0, .45);
+    line-height: 0;
+    counter-reset: line;
+}
+pre span {
+    display: block;
+    line-height: 1.5rem;
+}
+pre span::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888;
+}
+.text-white {
+    color: #ffffff;
+}
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+.searchactive {
+    color: inherit;
+    background-color: rgba(255,255,255,.1);
+}
+.hamburger {
+    color: black;
+    border-color: black;
+    background-color: black;
+}
