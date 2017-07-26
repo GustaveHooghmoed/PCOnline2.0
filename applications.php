@@ -8,7 +8,6 @@
 $cvwl = false;
 include 'includes/phpimports.php';
 $active = 'vacature';
-$keywords;
 ?>
 <?php system::copyRightSign();?>
     <!DOCTYPE html>
@@ -60,7 +59,7 @@ $keywords;
                                             <input type="hidden" class="form-control col-md-8" name="users">
                                             <div style="display:inline-block;">
                                                 <input type="text" class="form-control" name="keywords"
-                                                       placeholder="Zoeken" value="<?php echo $_REQUEST['keywords'];?>">
+                                                       placeholder="Zoeken" value="<?php if(isset($_REQUEST['keywords'])) { echo $_REQUEST['keywords']; } else {echo '';} ?>">
                                             </div>
                                             <div style="display:inline-block;">
                                                 <a href="applications.php" class="btn-sm btn-danger">Reset</a>

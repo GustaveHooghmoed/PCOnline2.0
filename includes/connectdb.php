@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
-$username="settlerc";
-$password="---";
-$db_name="settlerc_pco";
+$username="root";
+$password="";
+$db_name="pc";
 
 /*$host="localhost";
 $username="root";

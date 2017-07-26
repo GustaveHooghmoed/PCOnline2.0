@@ -5,6 +5,7 @@
  * Date: 19-1-2017
  * Time: 10:21
  */
+error_reporting(0);
 class user {
     static function loginWithCookie($mysqli, $email, $sessionID, $redirect) {
         if(!empty($email) && !empty($sessionID)) {
@@ -1610,12 +1611,12 @@ class user {
                 <html xmlns="http://www.w3.org/1999/xhtml">
                 <head>
                 <meta name="viewport" content="width=device-width" />
-    
+
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
                 <title>Parkcraft Online</title>
-    
+
                 </head>
-    
+
                 <body bgcolor="#FFFFFF">
                 <style>
                 /* -------------------------------------
@@ -1626,7 +1627,7 @@ class user {
                     padding:0;
                 }
                 * { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-    
+
                 img {
                     max-width: 100%;
                 }
@@ -1640,13 +1641,13 @@ class user {
                     width: 100%!important;
                     height: 100%;
                 }
-    
-    
+
+
                 /* -------------------------------------
                         ELEMENTS
                 ------------------------------------- */
                 a { color: #2BA6CB;}
-    
+
                 .btn {
                     text-decoration:none;
                     color: #FFF;
@@ -1658,7 +1659,7 @@ class user {
                     cursor:pointer;
                     display: inline-block;
                 }
-    
+
                 p.callout {
                     padding:15px;
                     background-color:#ECF8FF;
@@ -1668,11 +1669,11 @@ class user {
                     font-weight:bold;
                     color: #2BA6CB;
                 }
-    
+
                 table.social {
                 /* 	padding:15px; */
                     background-color: #ebebeb;
-    
+
                 }
                 .social .soc-btn {
                     padding: 3px 7px;
@@ -1687,27 +1688,27 @@ class user {
                 a.tw { background-color: #1daced!important; }
                 a.gp { background-color: #DB4A39!important; }
                 a.ms { background-color: #000!important; }
-    
+
                 .sidebar .soc-btn {
                     display:block;
                     width:100%;
                 }
-    
+
                 /* -------------------------------------
                         HEADER
                 ------------------------------------- */
                 table.head-wrap { width: 100%;}
-    
+
                 .header.container table td.logo { padding: 15px; }
                 .header.container table td.label { padding: 15px; padding-left:0px;}
-    
-    
+
+
                 /* -------------------------------------
                         BODY
                 ------------------------------------- */
                 table.body-wrap { width: 100%;}
-    
-    
+
+
                 /* -------------------------------------
                         FOOTER
                 ------------------------------------- */
@@ -1717,10 +1718,10 @@ class user {
                 .footer-wrap .container td.content p {
                     font-size:10px;
                     font-weight: bold;
-    
+
                 }
-    
-    
+
+
                 /* -------------------------------------
                         TYPOGRAPHY
                 ------------------------------------- */
@@ -1728,16 +1729,16 @@ class user {
                 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
                 }
                 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
-    
+
                 h1 { font-weight:200; font-size: 44px;}
                 h2 { font-weight:200; font-size: 37px;}
                 h3 { font-weight:500; font-size: 27px;}
                 h4 { font-weight:500; font-size: 23px;}
                 h5 { font-weight:900; font-size: 17px;}
                 h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
-    
+
                 .collapse { margin:0!important;}
-    
+
                 p, ul {
                     margin-bottom: 10px;
                     font-weight: normal;
@@ -1746,12 +1747,12 @@ class user {
                 }
                 p.lead { font-size:17px; }
                 p.last { margin-bottom:0px;}
-    
+
                 ul li {
                     margin-left:5px;
                     list-style-position: inside;
                 }
-    
+
                 /* -------------------------------------
                         SIDEBAR
                 ------------------------------------- */
@@ -1776,14 +1777,14 @@ class user {
                 }
                 ul.sidebar li a.last { border-bottom-width:0px;}
                 ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
-    
-    
-    
+
+
+
                 /* ---------------------------------------------------
                         RESPONSIVENESS
                         Nuke it from orbit. It\'s the only way to be sure.
                 ------------------------------------------------------ */
-    
+
                 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
                 .container {
                     display:block!important;
@@ -1791,7 +1792,7 @@ class user {
                     margin:0 auto!important; /* makes it centered */
                     clear:both!important;
                 }
-    
+
                 /* This should also be a block element, so that it will fill 100% of the .container */
                 .content {
                     padding:15px;
@@ -1799,11 +1800,11 @@ class user {
                     margin:0 auto;
                     display:block;
                 }
-    
+
                 /* Let\'s make sure tables in the content area are 100% wide */
                 .content table { width: 100%; }
-    
-    
+
+
                 /* Odds and ends */
                 .column {
                     width: 300px;
@@ -1821,26 +1822,26 @@ class user {
                     min-width: 279px;
                     float:left;
                 }
-    
+
                 /* Be sure to place a .clear element after each set of columns, just to be safe */
                 .clear { display: block; clear: both; }
-    
-    
+
+
                 /* -------------------------------------------
                         PHONE
                         For clients that support media queries.
                         Nothing fancy.
                 -------------------------------------------- */
                 @media only screen and (max-width: 600px) {
-    
+
                     a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
-    
+
                     div[class="column"] { width: auto!important; float:none!important;}
-    
+
                     table.social div[class="column"] {
                         width:auto!important;
                     }
-    
+
                 }
                 </style>
                 <!-- HEADER -->
@@ -1848,23 +1849,23 @@ class user {
                     <tr>
                         <td></td>
                         <td class="header container" >
-    
+
                                 <div class="content">
                                     <h3><span style="color: white;">ParkCraft Online</span></h3>
                                 </div>
-    
+
                         </td>
                         <td></td>
                     </tr>
                 </table><!-- /HEADER -->
-    
-    
+
+
                 <!-- BODY -->
                 <table class="body-wrap">
                     <tr>
                         <td></td>
                         <td class="container" bgcolor="#FFFFFF">
-    
+
                             <div class="content">
                             <table>
                                 <tr>
@@ -1875,34 +1876,34 @@ class user {
                                         <table class="social" width="100%">
                                             <tbody><tr>
                                                 <td>
-    
+
                                                     <!-- column 1 -->
                                                     <table align="left" class="column">
                                                         <tbody><tr>
                                                             <td>
-    
+
                                                                 <h5 class="">heb je nog vragen? Je kunt ons hier bereiken:</h5>
                                                                 <p class=""><a href="https://www.facebook.com/ParkCraft-370915049752819/" class="soc-btn fb">Facebook</a> <a href="https://twitter.com/ParkenCraft" class="soc-btn tw">Twitter</a> <a href="https://www.youtube.com/ParkCraft" class="soc-btn gp">YouTube</a></p>
-    
-    
+
+
                                                             </td>
                                                         </tr>
                                                     </tbody></table><!-- /column 1 -->
-    
+
                                                     <!-- column 2 -->
                                                     <table align="left" class="column">
                                                         <tbody><tr>
                                                             <td>
-    
+
                                                                 <h5 class="">Heb je fouten gevonden?</h5>
                                                                 <p>Email: <strong><a href="emailto:dani@parkcraft.nl">dani@parkcraft.nl</a></strong></p>
-    
+
                                                             </td>
                                                         </tr>
                                                     </tbody></table><!-- /column 2 -->
-    
+
                                                     <span class="clear"></span>
-    
+
                                                 </td>
                                             </tr>
                                         </tbody></table>
@@ -1914,7 +1915,7 @@ class user {
                         <td></td>
                     </tr>
                 </table>
-    
+
                 </body>
                 </html>';
                 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -2112,8 +2113,18 @@ class article {
             echo '<p>Dit park heeft nog geen artikelen gepost.</p>';
         }
         while($row = mysqli_fetch_assoc($result)) {
-            $title = $row['post_title'];
             $postid = $row['ID'];
+            $title = $row['post_title'];
+            if(!($row['post_poster'] == $_SESSION['UUID'])) {
+              if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
+                continue;
+              }
+            } else {
+              if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
+                $title = '<span class="label label-info">Wacht op bevestiging</span> ' . $title;
+              }
+            }
+
             $parkname = park::getName($mysqli, $row['park_id']);
             $logo = park::getLogo($mysqli, $row['park_id']);
             $post = common::random(20);
@@ -2163,7 +2174,7 @@ class article {
         }
     }
     static function loadArticles($mysqli) {
-        $sql = "SELECT * FROM pco_posts WHERE deleted='0' order by ID desc";
+        $sql = "SELECT * FROM pco_posts WHERE deleted='0' AND reviewed='1' order by ID desc";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if(user::isPlayerFollowingAnyPark($mysqli, $_SESSION['UUID'])) {
@@ -2284,7 +2295,7 @@ class article {
         $logo = park::getLogo($mysqli, $row['park_id']);
         $body = $row['post_body'];
         $body = common::closetags(common::makeUrls($body));
-        $body = str_replace("[enter]", "<br />", $body);
+		$body = str_replace("[enter]", "<br />", $body);
         $postimages = $row['post_images'];
         if(strpos($postimages, 'Invalid URL') !== false) {
             $postimages = park::getHeader($mysqli, $row['park_id']);
@@ -2328,10 +2339,57 @@ class article {
                   <li><a href="https://www.facebook.com/sharer/sharer.php?u='.$url.'&t='.$title.'" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="resources/svg/Facebook.svg"></a></li>
                   <li><a href="https://twitter.com/intent/tweet?source='.$url.'&text='.$title.' '.$url.'&via=parkencraft" target="_blank" title="Tweet"><img alt="Tweet" src="resources/svg/Twitter.svg"></a></li>
                   <li><a href="http://www.reddit.com/submit?url='.$url.'&title='.$title.'" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="resources/svg/Reddit.svg"></a></li>
-                
+
                 </ul>
             </div>
         ';
+    }
+    static function acceptArticle($mysqli, $id) {
+      $sql = "UPDATE pco_posts SET reviewed='1' WHERE ID='$id'";
+      $result = mysqli_query($mysqli, $sql);
+      $sql1 = "SELECT * FROM pco_posts WHERE ID='$id' AND reviewed='1'";
+      $result1 = mysqli_query($mysqli, $sql1);
+      $count1 = mysqli_num_rows($result1);
+      if($count1 > 0) {
+          return true;
+      } else {
+          return false;
+      }
+    }
+    static function rejectArticle($mysqli, $id) {
+        $sql = "UPDATE pco_posts SET reviewed='2' WHERE ID='$id'";
+        $result = mysqli_query($mysqli, $sql);
+        $sql1 = "SELECT * FROM pco_posts WHERE ID='$id' AND reviewed='2'";
+        $result1 = mysqli_query($mysqli, $sql1);
+        $count1 = mysqli_num_rows($result1);
+        if($count1 > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+  	static function statusArticle($mysqli, $id) {
+      $sql="SELECT * FROM pco_posts WHERE ID='$id'";
+      $result = mysqli_query($mysqli, $sql);
+      $count = mysqli_num_rows($result);
+      $row = mysqli_fetch_assoc($result);
+      if($count > 0) {
+        return $row["reviewed"];
+      } else {
+      return false;
+    }
+  }
+    static function authorID($mysqli, $id) {
+      $sql="SELECT * FROM pco_posts WHERE ID='$id'";
+      $result = mysqli_query($mysqli, $sql);
+      $count = mysqli_num_rows($result);
+      $row = mysqli_fetch_assoc($result);
+      if($count > 0) {
+        return $row['post_poster'];
+      } else {
+      return false;
+    }
     }
     static function loadReactions($mysqli, $id) {
         $sql = "SELECT * FROM pco_reaction WHERE article_id='$id'";
@@ -2371,7 +2429,7 @@ class article {
             }
         }
         echo '<script>function openUserPage(user) {
-                 window.open("https://parkcraft.nl/user.php?id=" + user,"_self")
+                 window.open("https://parkcraft.nl/user.php?id="  + user,""_self")
              }</script>';
     }
     static function getReactionCount($mysqli, $id) {
@@ -2513,11 +2571,18 @@ class article {
     }
     static function loadAllPosts($mysqli, $pageid) {
         $pageposts = $pageid*50;
-        $sql="SELECT * FROM pco_posts ORDER BY ID DESC LIMIT $pageposts, 50";
+        $sql="SELECT * FROM pco_posts WHERE deleted NOT IN ('1', '2') AND reviewed NOT IN ('0', '2') ORDER BY ID DESC LIMIT $pageposts, 50";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if ($count > 0) {
             echo '
+            <ul class="nav nav-pills nav-justified">
+              <li class="active"><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+            </ul>
+            <hr>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -2537,11 +2602,7 @@ class article {
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
                 echo '<td><p style="word-wrap: break-word;">'.article::getReactionCount($mysqli, $id).'</p></td>';
-                if($deleted == 2 || $deleted == 1) {
-                    echo '<td><a href="staff.php?posts=' . $id . '&undoremovepost=&pi='.($pageid + 1).'" class="btn btn-info btn-sm">Verwijderen ongedaan maken</a></td>';
-                } else {
-                    echo '<td><a href="staff.php?posts=' . $id . '&removepost=&pi='.($pageid + 1).'" class="btn btn-danger btn-sm">Verwijderen</a></td>';
-                }
+                echo '<td><a href="staff.php?posts=' . $id . '&removepost=&pi='.($pageid + 1).'" class="btn btn-danger btn-sm">Verwijderen</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -2563,7 +2624,205 @@ class article {
                 }
             }
         } else {
-            echo '<p>Geen artikelen gevonden op deze pagina.</p>';
+
+            echo '          <ul class="nav nav-pills nav-justified">
+                        <li class="active"><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+                        <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
+                        <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+                        <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+                      </ul>
+                      <hr>
+                      <p>Geen artikelen gevonden op deze pagina.</p>';
+        }
+    }
+    static function loadReviewPosts($mysqli, $pageid) {
+        $pageposts = $pageid*50;
+        $sql="SELECT * FROM pco_posts WHERE deleted NOT IN ('1', '2') AND reviewed NOT IN ('1') ORDER BY ID DESC LIMIT $pageposts, 50";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        if ($count > 0) {
+            echo '
+            <ul class="nav nav-pills nav-justified">
+              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li class="active"><a href="staff.php?reviewposts=&page=1">Review</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+            </ul>
+            <hr>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Artikel</th>
+                            <th>Park</th>
+                            <th>Opties</th>
+                        </tr>
+                    </thead>';
+            echo '<tbody>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['ID'];
+                $parkid = $row['park_id'];
+                $title = $row['post_title'];
+                echo '<tr>';
+                echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
+                echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
+                echo '<td><a href="article.php?id=' . $id . '" class="btn btn-info btn-sm">Bekijken</a></td>';
+                echo '</tr>';
+            }
+            echo '</tbody>';
+            echo '</table>';
+            $sql1="SELECT * FROM pco_reaction";
+            $result1 = mysqli_query($mysqli, $sql1);
+            $count1 = mysqli_num_rows($result1);
+            if($count1 > ($pageid+1)*50) {
+                if($pageid > 0) {
+                    echo '<a href="staff.php?reviewposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                }
+                echo '<a href="staff.php?reviewposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+            } else {
+                if ($pageid > 0) {
+                    echo '<a href="staff.php?reviewposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    if ($count1 > ($pageid + 1) * 50) {
+                        echo '<a href="staff.php?reviewposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                    }
+                }
+            }
+        } else {
+            echo '<ul class="nav nav-pills nav-justified">
+              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li class="active"><a href="staff.php?reviewposts=&page=1">Review</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+            </ul>
+            <hr>
+            <p>Geen artikelen gevonden op deze pagina.</p>';
+        }
+    }
+	static function loadRejectedPosts($mysqli, $pageid) {
+        $pageposts = $pageid*50;
+        $sql="SELECT * FROM pco_posts WHERE reviewed='2' AND removed='0' ORDER BY ID DESC LIMIT $pageposts, 50";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        if ($count > 0) {
+            echo '
+            <ul class="nav nav-pills nav-justified">
+              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
+              <li class="active"><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+            </ul>
+            <hr>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Artikel</th>
+                            <th>Park</th>
+                            <th>Opties</th>
+                        </tr>
+                    </thead>';
+            echo '<tbody>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['ID'];
+                $parkid = $row['park_id'];
+                $title = $row['post_title'];
+                $deleted = $row['deleted'];
+                echo '<tr>';
+                echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
+                echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
+                echo '<td><a href="article.php?id=' . $id . '" class="btn btn-info btn-sm">Bekijken</a></td>';
+                echo '</tr>';
+            }
+            echo '</tbody>';
+            echo '</table>';
+            $sql1="SELECT * FROM pco_reaction";
+            $result1 = mysqli_query($mysqli, $sql1);
+            $count1 = mysqli_num_rows($result1);
+            if($count1 > ($pageid+1)*50) {
+                if($pageid > 0) {
+                    echo '<a href="staff.php?rejectedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                }
+                echo '<a href="staff.php?rejectedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+            } else {
+                if ($pageid > 0) {
+                    echo '<a href="staff.php?rejectedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    if ($count1 > ($pageid + 1) * 50) {
+                        echo '<a href="staff.php?rejectedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                    }
+                }
+            }
+        } else {
+            echo '<ul class="nav nav-pills nav-justified">
+              <li><a href="/staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li><a href="/staff.php?reviewposts=&page=1">Review</a></li>
+              <li class="active"><a href="/staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li><a href="/staff.php?deletedposts=&page=1" class="active">Verwijderd</a></li>
+            </ul>
+            <hr>
+            <p>Geen artikelen gevonden op deze pagina.</p>';
+        }
+    }
+	static function loadDeletedPosts($mysqli, $pageid) {
+        $pageposts = $pageid*50;
+        $sql="SELECT * FROM pco_posts WHERE deleted='2' ORDER BY ID DESC LIMIT $pageposts, 50";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        if ($count > 0) {
+            echo '
+            <ul class="nav nav-pills nav-justified">
+              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li class="active"><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+            </ul>
+            <hr>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Artikel</th>
+                            <th>Park</th>
+							<th>Reacties</th>
+                            <th>Opties</th>
+                        </tr>
+                    </thead>';
+            echo '<tbody>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['ID'];
+                $parkid = $row['park_id'];
+                $title = $row['post_title'];
+                $deleted = $row['deleted'];
+                echo '<tr>';
+                echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
+                echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
+				echo '<td><p style="word-wrap: break-word;">'.article::getReactionCount($mysqli, $id).'</p></td>';
+                echo '<td><a href="staff.php?posts=' . $id . '&undoremovepost=&pi='.($pageid + 1).'" class="btn btn-info btn-sm">Verwijderen ongedaan maken</a></td>';
+                echo '</tr>';
+            }
+            echo '</tbody>';
+            echo '</table>';
+            $sql1="SELECT * FROM pco_reaction";
+            $result1 = mysqli_query($mysqli, $sql1);
+            $count1 = mysqli_num_rows($result1);
+            if($count1 > ($pageid+1)*50) {
+                if($pageid > 0) {
+                    echo '<a href="staff.php?deletedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                }
+                echo '<a href="staff.php?deletedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+            } else {
+                if ($pageid > 0) {
+                    echo '<a href="staff.php?deletedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    if ($count1 > ($pageid + 1) * 50) {
+                        echo '<a href="staff.php?deletedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                    }
+                }
+            }
+        } else {
+            echo '<ul class="nav nav-pills nav-justified">
+              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
+              <li class="active"><a href="staff.php?deletedposts=&page=1" class="active">Verwijderd</a></li>
+            </ul>
+            <hr>
+            <p>Geen artikelen gevonden op deze pagina.</p>';
         }
     }
     static function like($mysqli, $articleid, $uuid) {
@@ -2595,6 +2854,14 @@ class article {
         $row = mysqli_fetch_assoc($result);
         $likes = explode(",", $row['post_likes']);
         return (count($likes)-1);
+    }
+    static function loadReview($mysqli, $articleid) {
+        $sql="SELECT * FROM pco_posts WHERE ID='$articleid'";
+        $result=mysqli_query($mysqli,$sql);
+        $count=mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
+        $reviewed = explode(",", $row['reviewed']);
+        return $likes;
     }
     static function LoadLikes($mysqli, $postid) {
         $sql="SELECT * FROM pco_posts WHERE ID='$postid'";
@@ -3739,7 +4006,7 @@ class search {
                                 </div>
                                 <script>
                                     var id' . $post . ' = document.getElementById("' . $post . '");
-    
+
                                     id' . $post . '.onclick = function() {
                                         window.location.href = "article.php?id=' . $postid . '";
                                     };
@@ -3750,7 +4017,7 @@ class search {
                                 <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
                             </div>
                             <hr />
-    
+
                             ';
             }
         }
@@ -4866,15 +5133,15 @@ class vacature {
                                 </div>
                                 <script>
                                     var id' . $id . ' = document.getElementById("' . $id . '");
-    
+
                                     id' . $id . '.onclick = function() {
                                         window.location.href = "vacature.php?id=' . $id . '";
                                     };
                                 </script>
                                     <span>' . vacature::countApplications($mysqli, $id) . ' sollicitant(en)</span>
                             </div>
-    
-    
+
+
                             ';
                 }
         } else {
@@ -5354,7 +5621,7 @@ class vacature {
                                 </div>
                                 <script>
                                     var id' . $id . ' = document.getElementById("' . $id . '");
-    
+
                                     id' . $id . '.onclick = function() {
                                         window.location.href = "vacature.php?id=' . $id . '";
                                     };
@@ -5363,7 +5630,7 @@ class vacature {
                                     <span class="pull-right">Vacature verloopt over ' . $difference->d . ' dag(en)</span>
                             </div>
                             <hr />
-    
+
                             ';
                 }
             }
@@ -5430,7 +5697,7 @@ class vacature {
                                 </div>
                                 <script>
                                     var id' . $id . ' = document.getElementById("' . $id . '");
-    
+
                                     id' . $id . '.onclick = function() {
                                         window.location.href = "vacature.php?id=' . $id . '";
                                     };
@@ -5438,8 +5705,8 @@ class vacature {
                                 <span>' . vacature::countApplications($mysqli, $id) . ' sollicitant(en)</span>
                                 <span class="pull-right">Vacature verloopt over '.$difference->d.' dag(en)</span>
                             </div>
-    
-    
+
+
                             ';
                 }
             }
@@ -5621,7 +5888,7 @@ class plugins {
                         <p style="color: grey;">' . $row['description'] . '</p>
                         <span>Auteur: </span><a style="font-weight: bold;" href="//' . $row['author_link'] . '">' . $row['author'] . '</a><br />
                     </div>
-                
+
                 </div>
                 <script>
                 $(\'#' . $code . '\').on(\'click\', function (e) {

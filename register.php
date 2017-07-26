@@ -13,17 +13,17 @@ $cvwl = false;
 include 'includes/connectdb.php';
 include 'includes/PCO_API.php';
 if(isset($_POST['submit'])) {
-    require_once "includes/recaptchalib.php";
-    $recaptha = $_POST["g-recaptcha-response"];
-    $secret = "6LdRqRkUAAAAAGm3RGJKbUciYUF9yr4SsJ5UgEWj";
+  //  require_once "includes/recaptchalib.php";
+//    $recaptha = $_POST["g-recaptcha-response"];
+  //  $secret = "6LdRqRkUAAAAAGm3RGJKbUciYUF9yr4SsJ5UgEWj";
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $reCaptcha = new ReCaptcha($secret);
-    $response = $reCaptcha->verifyResponse(
-        $_SERVER["REMOTE_ADDR"],
-        $recaptha
-    );
-    if($response != null && $response->success) {
+  //  $reCaptcha = new ReCaptcha($secret);
+//    $response = $reCaptcha->verifyResponse(
+//        $_SERVER["REMOTE_ADDR"],
+//        $recaptha
+//    );
+    //if($response != null && $response->success) {
         $name = trim($name);
         $name = strip_tags($name);
         $name = mysqli_real_escape_string($mysqli, $name);
@@ -48,9 +48,9 @@ if(isset($_POST['submit'])) {
                 }
             }
         }
-    } else {
-        $info = "Vul aub de captcha in!";
-    }
+  //  } else {
+  //      $info = "Vul aub de captcha in!";
+  //  }
 }
 if(isset($_SESSION['user'])) {
     if(!user::hasAccess($mysqli, $_SESSION['UUID'])) {

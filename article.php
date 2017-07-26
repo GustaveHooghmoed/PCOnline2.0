@@ -9,6 +9,38 @@ $cvwl = true;
 include 'includes/phpimports.php';
 $id;
 $active = '';
+if(isset($_GET['accept']) && isset($_SESSION['UUID'])) {
+  if(article::statusArticle($mysqli, $id) == 0 && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
+    $id = $_GET['id'];
+
+    if(article::statusArticle($mysqli, $id) == 0 && article::acceptArticle($mysqli, $id)) {
+          $info = "Artikel is nu goedgekeurd";
+		  header("Location: article.php?id=" . $id . "&info=Artikel goed gekeurd");
+    } else {
+      $warning = "Er is iets fout gegaan, probeer opnieuw!";
+    }
+  } else {
+    $id = $_GET['id'];
+    header("Location: article.php?id=$id");
+  }
+
+}
+if(isset($_GET['reject']) && isset($_SESSION['UUID'])) {
+  if(article::statusArticle($mysqli, $id) == 0 && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
+    $id = $_GET['id'];
+
+    if(article::statusArticle($mysqli, $id) == 0 && article::rejectArticle($mysqli, $id)) {
+          $danger = "Artikel is nu afgekeurd";
+		  header("Location: article.php?id=" . $id . "&danger=Artikel afgekeurd");
+    } else {
+      $warning = "Er is iets fout gegaan, probeer opnieuw!";
+    }
+  } else {
+    $id = $_GET['id'];
+    header("Location: article.php?id=$id");
+  }
+
+}
 if(isset($_POST['submit']) && isset($_SESSION['UUID'])) {
     if(isset($_SESSION['UUID'])) {
         if (!article::exist($mysqli, $_POST['articleid'])) {
@@ -41,6 +73,7 @@ if(!article::exist($mysqli, $id)) {
     header("Location: home.php");
     exit;
 }
+
 if(isset($_REQUEST['like'])) {
     if(isset($_SESSION['UUID'])) {
         article::like($mysqli, $id, $_SESSION['UUID']);
@@ -54,6 +87,21 @@ if(isset($_REQUEST['unlike'])) {
         header("Location: article.php?id=$id");
         exit;
     }
+}
+$articleStatus = article::statusArticle($mysqli, $id);
+if($articleStatus == 0 || $articleStatus == 2) {
+  if(article::authorID($mysqli, $id) == $_SESSION['UUID'] || staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
+    if($articleStatus == 0) {
+      $warning = "Deze artikel word op het moment gecontroleerd, heb even geduld!";
+    }
+    if($articleStatus == 2) {
+      $danger = "Het artikel is afgekeurd, verander het artikel en probeer opnieuw!";
+    }
+  } else {
+    header("Location: home.php");
+    exit;
+  }
+
 }
 statistics::articleVisit($mysqli, $_SESSION['UUID'], $id);
 ?>
@@ -157,6 +205,20 @@ statistics::articleVisit($mysqli, $_SESSION['UUID'], $id);
                             </div>
                         </div>
                 <?php }?>
+                </div>
+                <?php if(staff::canManagePosts($mysqli, $_SESSION['UUID'])) { ?>
+                <div class="col-md-3 right-container well">
+                  <h4 class="text-danger">Staff Menu</h4>
+                  <?php }
+                  if(staff::canManagePosts($mysqli, $_SESSION['UUID'])) {?>
+                      <p><a href="<?php echo 'staff.php?posts=' . $id . '&removepost='; ?>" class="shortcut"><i class="material-icons">delete</i><span>Artikel verwijderen</span></a></p>
+					<?php  if(article::statusArticle($mysqli, $id) == 0 || article::statusArticle($mysqli, $id) == 2) {?>
+                    <hr>
+                    <h5 class="text-danger">Review Artikel</h5>
+                      <p><a href="?id=<?php echo $id . "&";?>accept" class="btn btn-succes btn-sm">Artikel Toestaan</a></p>
+                      <p><a href="?id=<?php echo $id . "&";?>reject" class="btn btn-danger btn-sm">Artikel niet Toestaan</a></p>
+					<?php }} ?>
+
                 </div>
 
                 <div class="col-md-3 right-container well">

@@ -7,6 +7,12 @@
  */
 $cvwl = false;
 include 'includes/phpimports.php';
+include 'includes/HTMLPurifier.standalone.php';
+$config = HTMLPurifier_Config::createDefault();
+$purifier = new HTMLPurifier($config);
+$config->set('HTML.SafeIframe', true);
+$config->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%'); //allow YouTube and Vimeo
+
 $parkid = $_REQUEST['id'];
 if(!park::exist($mysqli, $parkid) || (park::isDeleted($mysqli, $parkid))) {
     header("Location: home.php");
@@ -85,16 +91,16 @@ if(isset($_GET['removeapplication'])) {
     $title = strip_tags($title);
     $title = trim($title);
     $title = mysqli_real_escape_string($mysqli, $title);
-    $article = $_POST['article'];
-    $article = preg_replace("/\r\n|\r/", "[enter]", $article);
-    $article = strip_tags($article, '<strong>, <i>, <br>');
-    $article = trim($article);
-    $article = mysqli_real_escape_string($mysqli, $article);
+    //$article = preg_replace("/\r\n|\r/", "[enter]", $article);
+    //$article = strip_tags($article, '<strong>, <i>, <br>');
+    //$article = trim($article);
+    //$article = mysqli_real_escape_string($mysqli, $article);
     $id = $_POST['postid'];
     $parkid = $_POST['id'];
-    $body = preg_replace("/\r\n|\r/", "<br />", $article);
-    $body = strip_tags($body, '<strong>, <i>, <br>');
-    $body = trim($body);
+    //$body = preg_replace("/\r\n|\r/", "<br />", $article);
+    //$body = strip_tags($body, '<strong>, <i>, <br>');
+    //$body = trim($body);
+	$body = $purifier->purify($_POST['article']);
     $body = mysqli_real_escape_string($mysqli, $body);
     if(park::CanWriteArticle($mysqli, $parkid, $_SESSION['UUID']) || staff::canManageParks($mysqli, $_SESSION['UUID'])) {
         if(article::editArticle($mysqli, $parkid, $id, $title, $body, $_SESSION['UUID'])) {
@@ -653,6 +659,17 @@ system::copyRightSign();?>
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script>
+    <script src="assets/js/summernote-nl-NL.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[id=article]').summernote({
+                lang: 'nl-NL' // default: 'en-US'
+            });
+        });
+    </script>
+
     </body>
     </html>
 <?php

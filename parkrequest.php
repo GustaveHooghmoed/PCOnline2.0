@@ -38,6 +38,11 @@ if(isset($_POST['submit'])) {
     } else {
         $warning = "Niet alle velden zijn correct ingevuld.";
     }
+} else {
+  $parkname = '';
+  $parkip = '';
+  $parktwitter = '';
+  $parkemail = '';
 }
 $active = 'parkrequest';
 ?>

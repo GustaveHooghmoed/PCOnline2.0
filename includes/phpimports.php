@@ -12,6 +12,7 @@ include 'includes/PCO_API.php';
 include 'includes/CHAT_API.php';
 include 'includes/Mobile_Detect.php';
 
+
 $mobile = false;
 $detect = new Mobile_Detect();
 if ($detect->isMobile()) {

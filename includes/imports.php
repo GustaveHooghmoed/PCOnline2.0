@@ -17,7 +17,7 @@ if(isset($_REQUEST['danger'])) {
 ?>
 <?php include_once("includes/analyticstracking.php") ?>
 <!-- Material Design fonts -->
-<link rel="stylesheet" type="text/css" href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 <link rel="stylesheet" type="text/css" href="assets/fonts/materialicons/Material-Icons.css">
 
 <!-- Bootstrap -->

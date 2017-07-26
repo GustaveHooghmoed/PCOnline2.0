@@ -27,7 +27,7 @@ class feed {
     static function loadArticles($mysqli, $pageid, $uuid) {
         $pagefeed = $pageid*10;
         $parksfollowed = feed::getFollowedParks($mysqli, $uuid);
-        $sql = "SELECT * FROM pco_posts WHERE deleted='0' AND park_id IN (".$parksfollowed.") order by ID desc LIMIT $pagefeed, 10";
+        $sql = "SELECT * FROM pco_posts WHERE deleted='0' AND reviewed='1' AND park_id IN (".$parksfollowed.") order by ID desc LIMIT $pagefeed, 10";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if(user::isPlayerFollowingAnyPark($mysqli, $_SESSION['UUID'])) {
@@ -84,7 +84,7 @@ class feed {
                 }
             }
         } else {
-            $sql = "SELECT * FROM pco_posts WHERE deleted='0' order by ID desc LIMIT $pagefeed, 10";
+            $sql = "SELECT * FROM pco_posts WHERE deleted='0' AND reviewed='1' order by ID desc LIMIT $pagefeed, 10";
             $result = mysqli_query($mysqli, $sql);
             $count = mysqli_num_rows($result);
             while ($row = mysqli_fetch_assoc($result)) {

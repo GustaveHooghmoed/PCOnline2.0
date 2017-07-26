@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e367d7c-1006-4bdb-b97c-144393183555" name="Default" comment="" />
+    <list default="true" id="3e370ebf-8419-4472-89e5-23408bfd8375" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/applications.php" afterPath="$PROJECT_DIR$/applications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/article.php" afterPath="$PROJECT_DIR$/article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/FEED_API.php" afterPath="$PROJECT_DIR$/includes/FEED_API.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/PCO_API.php" afterPath="$PROJECT_DIR$/includes/PCO_API.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/connectdb.php" afterPath="$PROJECT_DIR$/includes/connectdb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/imports.php" afterPath="$PROJECT_DIR$/includes/imports.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/nav.php" afterPath="$PROJECT_DIR$/includes/nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/phpimports.php" afterPath="$PROJECT_DIR$/includes/phpimports.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parkrequest.php" afterPath="$PROJECT_DIR$/parkrequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parksettings.php" afterPath="$PROJECT_DIR$/parksettings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staff.php" afterPath="$PROJECT_DIR$/staff.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/writearticle.php" afterPath="$PROJECT_DIR$/writearticle.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,335 +25,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="phpimports.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/phpimports.php">
+    <leaf>
+      <file leaf-file-name="HTMLPurifier.standalone.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/HTMLPurifier.standalone.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PCO_API.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/PCO_API.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="1517" column="48" lean-forward="false" selection-start-line="1517" selection-start-column="48" selection-end-line="1517" selection-end-column="48" />
-              <folding>
-                <element signature="n#loginWithCookie#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#createSessionID#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#login#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#hasAccess#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#isActivated#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#register#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getActivationCode#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#exist#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#update#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getUUIDFromEmail#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#existUUID#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#logout#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getUUIDFromID#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getIDFromUUID#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getName#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getEmail#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getPrefix#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getLabel#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getNameByUUID#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getRank#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getRankByUUID#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getCurrentPassword#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#IsFollowingPark#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#IsActivationCodeValid#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#IsPasswordCodeValid#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#activateAccount#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#changePassword#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#changeForgotPassword#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#delete#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#sendActivationMail#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#sendChangePassword#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#sendEmail#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#loadFollowedParks#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#loadAllUsers#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#loadAllUsersSearch#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#loadUserIn#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#sendEmailToEveryone#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#isPlayerFollowingAnyPark#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getTimeNow#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#setLastExcecution#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getLastExcecution#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#setReceiveNewsEmails#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getReceiveNewsEmails#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#sendActivationMailToAll#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#setReceiveReactionEmails#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getReceiveReactionEmails#0;n#user#0;n#!!top" expanded="false" />
-                <element signature="n#getParkID#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#isDeleted#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#deletepost#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#undeletepost#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#deletepoststaff#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#undeletepoststaff#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#post#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#exist#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#loadArticlesPark#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#loadArticles#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#loadArticle#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#loadReactions#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#getReactionCount#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#editArticle#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#PlaceReaction#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#sendReactionEmail#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#RemoveReaction#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#getTitle#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#loadAllReactions#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#loadAllPosts#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#like#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#unlike#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#isLiking#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#countLikes#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#LoadLikes#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#getOwnerEmail#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getUUIDFromStaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#removestaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#addstaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#changeOwner#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#editstaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getStaffPrefix#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#loadstaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#loadarticles#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#updatesettings#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getParkRequestRequester#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getParkRequestName#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#refuserequest#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#acceptrequest#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#loadrequests#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#request#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getName#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getBackrgound#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getLogo#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getHeader#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getDescription#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getIp#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#isDeleted#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getEmail#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#IsUserStaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#IsUserOwner#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#CanEditSettings#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#CanWriteArticle#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#CanManageStaff#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#CanManageRides#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#CanManageJobs#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#unfollow#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#follow#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#loadWhoToFollow#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#exist#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getFollowers#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#LoadParksSearch#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#LoadParks#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#LoadParksList#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#getParkIdFromAPIKey#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#LoadFollowers#0;n#park#0;n#!!top" expanded="false" />
-                <element signature="n#random#0;n#common#0;n#!!top" expanded="false" />
-                <element signature="n#uploadimagenotmp#0;n#common#0;n#!!top" expanded="false" />
-                <element signature="n#uploadimage#0;n#common#0;n#!!top" expanded="false" />
-                <element signature="n#makeUrls#0;n#common#0;n#!!top" expanded="false" />
-                <element signature="n#getIpOfClient#0;n#common#0;n#!!top" expanded="false" />
-                <element signature="n#closetags#0;n#common#0;n#!!top" expanded="false" />
-                <element signature="n#parks#0;n#nav#0;n#!!top" expanded="false" />
-                <element signature="n#search#0;n#!!top" expanded="false" />
-                <element signature="n#loadParks#0;n#search#0;n#!!top" expanded="false" />
-                <element signature="n#load#0;n#search#0;n#!!top" expanded="false" />
-                <element signature="n#isMaintenanceModeOn#0;n#system#0;n#!!top" expanded="false" />
-                <element signature="n#copyRightSign#0;n#system#0;n#!!top" expanded="false" />
-                <element signature="n#addPageVisit#0;n#system#0;n#!!top" expanded="false" />
-                <element signature="n#getDateNow#0;n#system#0;n#!!top" expanded="false" />
-                <element signature="n#getBackground#0;n#system#0;n#!!top" expanded="false" />
-                <element signature="n#skycraper#0;n#ads#0;n#!!top" expanded="false" />
-                <element signature="n#vierkant#0;n#ads#0;n#!!top" expanded="false" />
-                <element signature="n#canUseStaffPanel#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageParkRequests#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageUsers#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageParks#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageComments#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canSendMail#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManagePosts#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageApplications#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageJobs#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#canManageChats#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#remoteAccount#0;n#staff#0;n#!!top" expanded="false" />
-                <element signature="n#loadHelp#0;n#help#0;n#!!top" expanded="false" />
-                <element signature="n#getRideStatus#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#getShowStatus#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#getRides#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#getShows#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#loadrides#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#addshow#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#addride#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#removeride#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#generateRideCode#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#rideCodeExist#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#loadForParkPage#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#getLabelRide#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#getLabelShow#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#updateStatus#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#rideExist#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#isRideOfPark#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#countRidesOfPark#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#updateShowStatus#0;n#rides#0;n#!!top" expanded="false" />
-                <element signature="n#generateAPIKey#0;n#API#0;n#!!top" expanded="false" />
-                <element signature="n#APIKeyExist#0;n#API#0;n#!!top" expanded="false" />
-                <element signature="n#getKeyOfPark#0;n#API#0;n#!!top" expanded="false" />
-                <element signature="n#keyExist#0;n#API#0;n#!!top" expanded="false" />
-                <element signature="n#IsAuthor#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#canWriteTutorials#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#canWritePluginVanDeWeek#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#canWriteParkVanDeMaand#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#loadTutorials#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#postTutorial#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#loadTutorial#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#likeTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#unlikeTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#isLikingTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#countLikesTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#LoadLikesTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#existTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#getTitleTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#loadReactionsTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#getReactionCountTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#PlaceReactionTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#RemoveReactionTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-                <element signature="n#getVideos#0;n#youtube#0;n#!!top" expanded="false" />
-                <element signature="n#load#0;n#events#0;n#!!top" expanded="false" />
-                <element signature="n#parkRequestsRejected#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#parks#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#parkEvents#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#parkRides#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#parkStaff#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#posts#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#reactions#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#users#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#usersActivated#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#totalPageVisits#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#articleVisit#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#getCountsArticles#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#getTodayUniqueVisitors#0;n#statistics#0;n#!!top" expanded="false" />
-                <element signature="n#loadVacatures#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#vacaturesCount#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#loadVacaturesSettings#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#loadVacaturesStaff#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#addVacature#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#editVacature#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#removeVacature#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#unremoveVacature#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#excist#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#getName#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#apply#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="e#227321#227868#0#PHP" expanded="false" />
-                <element signature="e#228132#228703#0#PHP" expanded="false" />
-                <element signature="e#228966#229519#0#PHP" expanded="false" />
-                <element signature="e#229782#230329#0#PHP" expanded="false" />
-                <element signature="n#countApplications#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#loadApplications#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#loadApplicationsStaff#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#loadAllVacatures#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#CountAllVacatures#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#removeApplication#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#loadAllVacaturesSearch#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#opnieuwAanbieden#0;n#vacature#0;n#!!top" expanded="false" />
-                <element signature="n#exist#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#getName#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#getProfilePicture#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#getAbout#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#getMC#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#getActiveJobsOnParkCraft#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#update#0;n#userpage#0;n#!!top" expanded="false" />
-                <element signature="n#loadReactionsOfUser#0;n#userpage#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staff.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/staff.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectdb.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connectdb.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/connectdb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugins.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="48" column="15" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parksettings.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/parksettings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="641" column="53" lean-forward="false" selection-start-line="641" selection-start-column="53" selection-end-line="641" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imports.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/imports.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="37" column="54" lean-forward="false" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/css/core.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2562">
-              <caret line="122" column="10" lean-forward="false" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recaptchalib.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/recaptchalib.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="139" column="2" lean-forward="false" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -345,107 +50,8 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>CanWriteArticle</find>
-      <find>home.php</find>
-      <find>rank</find>
-      <find>Modal Header</find>
-      <find>online</find>
-      <find>Online</find>
-      <find>Canvasjs.com</find>
-      <find>version</find>
-      <find>CanvasJs.com</find>
-      <find>pagevisit</find>
-      <find>getLabel</find>
-      <find>http</find>
-      <find>Beste,</find>
-      <find>$splitted = str_split($body,</find>
-      <find>om</find>
-      <find>%</find>
-      <find>IS</find>
-      <find>makeUrls</find>
-      <find>#009688</find>
-      <find>nav-tabs</find>
-      <find>mail</find>
-      <find>*</find>
-      <find>$mysqli</find>
-      <find>parkl</find>
-      <find>uploadimage</find>
-      <find>getFoll</find>
-      <find>following</find>
-      <find>AND ip='&quot;.common::getIpOfClient().&quot;'</find>
-      <find>isFol</find>
-      <find>mailtoal</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/chat-api.php" />
-        <option value="$PROJECT_DIR$/API.php" />
-        <option value="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/assets/material/css/bootstrap-material-design.css" />
-        <option value="$PROJECT_DIR$/assets/material/css/bootstrap-material-design.min.css" />
-        <option value="$PROJECT_DIR$/includes/analyticstracking.php" />
-        <option value="$PROJECT_DIR$/includes/chat.js" />
-        <option value="$PROJECT_DIR$/includes/js/jquery.tablesorter.min.js" />
-        <option value="$PROJECT_DIR$/includes/js/jquery.tablesorter.js" />
-        <option value="$PROJECT_DIR$/includes/core.js" />
-        <option value="$PROJECT_DIR$/user_later/phpimports.php" />
-        <option value="$PROJECT_DIR$/user_later/imports.php" />
-        <option value="$PROJECT_DIR$/user_later/FEED_API.php" />
-        <option value="$PROJECT_DIR$/user_later/feed-api.php" />
-        <option value="$PROJECT_DIR$/user_later/test.php" />
-        <option value="$PROJECT_DIR$/includes/FEED_API.php" />
-        <option value="$PROJECT_DIR$/includes/phpimports.php" />
-        <option value="$PROJECT_DIR$/feed-api.php" />
-        <option value="$PROJECT_DIR$/parklist.php" />
-        <option value="$PROJECT_DIR$/includes/CHAT_API.php" />
-        <option value="$PROJECT_DIR$/applications.php" />
-        <option value="$PROJECT_DIR$/article.php" />
-        <option value="$PROJECT_DIR$/author.php" />
-        <option value="$PROJECT_DIR$/help.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/messenger.php" />
-        <option value="$PROJECT_DIR$/parkcraft.php" />
-        <option value="$PROJECT_DIR$/parkrequest.php" />
-        <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/settings.php" />
-        <option value="$PROJECT_DIR$/user.php" />
-        <option value="$PROJECT_DIR$/vacature.php" />
-        <option value="$PROJECT_DIR$/writearticle.php" />
-        <option value="$PROJECT_DIR$/includes/connectdb.php" />
-        <option value="$PROJECT_DIR$/videos.php" />
-        <option value="$PROJECT_DIR$/staff.php" />
-        <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/includes/js/masonry.pkgd.min.js" />
-        <option value="$PROJECT_DIR$/tutorial.php" />
-        <option value="$PROJECT_DIR$/includes/recaptchalib.php" />
-        <option value="$PROJECT_DIR$/includes/imports.php" />
-        <option value="$PROJECT_DIR$/includes/nav.php" />
-        <option value="$PROJECT_DIR$/plugins.php" />
-        <option value="$PROJECT_DIR$/app/API.php" />
-        <option value="$PROJECT_DIR$/home.php" />
-        <option value="$PROJECT_DIR$/includes/css/core.css" />
-        <option value="$PROJECT_DIR$/park.php" />
-        <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/includes/PCO_API.php" />
-        <option value="$PROJECT_DIR$/parksettings.php" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -456,7 +62,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="width" value="1932" />
@@ -478,7 +84,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -505,69 +110,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PCOnline2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PCOnline2.0" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PCOnline2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PCOnline2.0" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Github Projects/My-Band-Project/html" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/MAMP/htdocs/PCOnline 2.0/messenger.php" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\MAMP\htdocs\PCOnline2.0" />
-      <recent name="D:\MAMP\htdocs\PCOnline2.0\includes" />
-      <recent name="D:\MAMP\htdocs\PCOnline 2.0\user_later" />
-      <recent name="D:\MAMP\htdocs\PCOnline 2.0\includes" />
-      <recent name="D:\MAMP\htdocs\PCOnline 2.0\includes\js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MAMP\htdocs\PCOnline2.0" />
-      <recent name="D:\MAMP\htdocs\PCOnline2.0\user_later" />
-      <recent name="D:\MAMP\htdocs\PCOnline 2.0\includes\emoji" />
-      <recent name="D:\MAMP\htdocs\PCOnline 2.0\includes" />
-      <recent name="D:\MAMP\htdocs\PCOnline 2.0" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -581,86 +130,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.calender.php">
-    <configuration default="false" name="calender.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PCOnline 2.0/calender.php">
-      <method />
-    </configuration>
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.calender.php" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.calender.php" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -669,233 +138,39 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9e367d7c-1006-4bdb-b97c-144393183555" name="Default" comment="" />
-      <created>1485088329255</created>
+      <changelist id="3e370ebf-8419-4472-89e5-23408bfd8375" name="Default" comment="" />
+      <created>1501101100184</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1485088329255</updated>
-      <workItem from="1485088331471" duration="39000" />
-      <workItem from="1485088452135" duration="27138000" />
-      <workItem from="1485160447222" duration="17374000" />
-      <workItem from="1485252258111" duration="8084000" />
-      <workItem from="1485261241944" duration="28000" />
-      <workItem from="1485276406406" duration="567000" />
-      <workItem from="1485288666934" duration="4846000" />
-      <workItem from="1485347715692" duration="10199000" />
-      <workItem from="1485365019471" duration="1606000" />
-      <workItem from="1485368395223" duration="416000" />
-      <workItem from="1485369214549" duration="87000" />
-      <workItem from="1485439858878" duration="2489000" />
-      <workItem from="1485462849003" duration="3388000" />
-      <workItem from="1485519746068" duration="489000" />
-      <workItem from="1485522715952" duration="2448000" />
-      <workItem from="1485554281006" duration="10097000" />
-      <workItem from="1485604127734" duration="187000" />
-      <workItem from="1485605791174" duration="16026000" />
-      <workItem from="1485703118309" duration="1898000" />
-      <workItem from="1485765537944" duration="609000" />
-      <workItem from="1485771247292" duration="1594000" />
-      <workItem from="1485779009247" duration="3619000" />
-      <workItem from="1485804981892" duration="4898000" />
-      <workItem from="1485852387662" duration="2934000" />
-      <workItem from="1485856197173" duration="5889000" />
-      <workItem from="1485891134442" duration="4634000" />
-      <workItem from="1485934397866" duration="1736000" />
-      <workItem from="1485940162589" duration="5825000" />
-      <workItem from="1485953636418" duration="995000" />
-      <workItem from="1485954652376" duration="2192000" />
-      <workItem from="1485959648626" duration="7423000" />
-      <workItem from="1486025985934" duration="3400000" />
-      <workItem from="1486069582196" duration="1341000" />
-      <workItem from="1486212926817" duration="3291000" />
-      <workItem from="1486497825091" duration="656000" />
-      <workItem from="1486565532441" duration="6248000" />
-      <workItem from="1486577277318" duration="696000" />
-      <workItem from="1486587869554" duration="1397000" />
-      <workItem from="1486647936388" duration="207000" />
-      <workItem from="1486649609805" duration="6697000" />
-      <workItem from="1486717557335" duration="1477000" />
-      <workItem from="1486731051841" duration="12604000" />
-      <workItem from="1486756474677" duration="2071000" />
-      <workItem from="1486764961582" duration="755000" />
-      <workItem from="1486766892828" duration="1032000" />
-      <workItem from="1486813271463" duration="12391000" />
-      <workItem from="1486831535781" duration="1905000" />
-      <workItem from="1486899479747" duration="21292000" />
-      <workItem from="1487067549186" duration="39000" />
-      <workItem from="1487069402909" duration="452000" />
-      <workItem from="1487256734062" duration="780000" />
-      <workItem from="1487330038093" duration="868000" />
-      <workItem from="1487347078451" duration="3231000" />
-      <workItem from="1487415532127" duration="173000" />
-      <workItem from="1487504538340" duration="1077000" />
-      <workItem from="1487507502036" duration="6576000" />
-      <workItem from="1487532528111" duration="3306000" />
-      <workItem from="1487605252542" duration="1376000" />
-      <workItem from="1487625559312" duration="2888000" />
-      <workItem from="1487675946986" duration="28793000" />
-      <workItem from="1487760452519" duration="12566000" />
-      <workItem from="1487804902071" duration="156000" />
-      <workItem from="1487848255122" duration="281000" />
-      <workItem from="1487850444923" duration="2067000" />
-      <workItem from="1487884013400" duration="803000" />
-      <workItem from="1487886604103" duration="1626000" />
-      <workItem from="1487935390111" duration="518000" />
-      <workItem from="1487940717893" duration="1686000" />
-      <workItem from="1487956907892" duration="4060000" />
-      <workItem from="1488181035576" duration="2027000" />
-      <workItem from="1488184892688" duration="592000" />
-      <workItem from="1488195530084" duration="370000" />
-      <workItem from="1488202437169" duration="535000" />
-      <workItem from="1488211023111" duration="898000" />
-      <workItem from="1488289084986" duration="112000" />
-      <workItem from="1488295519678" duration="8424000" />
-      <workItem from="1488361847930" duration="3169000" />
-      <workItem from="1488380401184" duration="1384000" />
-      <workItem from="1488448022435" duration="22000" />
-      <workItem from="1488450100259" duration="444000" />
-      <workItem from="1488547702554" duration="1617000" />
-      <workItem from="1488582066972" duration="841000" />
-      <workItem from="1488720525141" duration="14588000" />
-      <workItem from="1488746675814" duration="3046000" />
-      <workItem from="1488789726859" duration="2112000" />
-      <workItem from="1488814777619" duration="22000" />
-      <workItem from="1488825362839" duration="3841000" />
-      <workItem from="1488877084366" duration="313000" />
-      <workItem from="1488905400378" duration="2033000" />
-      <workItem from="1488921831542" duration="618000" />
-      <workItem from="1488971466038" duration="1415000" />
-      <workItem from="1488977855935" duration="872000" />
-      <workItem from="1488992565472" duration="725000" />
-      <workItem from="1488998960039" duration="1240000" />
-      <workItem from="1489044990529" duration="27000" />
-      <workItem from="1489045421001" duration="972000" />
-      <workItem from="1489049376115" duration="5410000" />
-      <workItem from="1489390829811" duration="121000" />
-      <workItem from="1489393280082" duration="254000" />
-      <workItem from="1489393633387" duration="5000" />
-      <workItem from="1489393751136" duration="5360000" />
-      <workItem from="1489505462626" duration="14436000" />
-      <workItem from="1489571742139" duration="4511000" />
-      <workItem from="1489588920323" duration="3742000" />
-      <workItem from="1489613511787" duration="1038000" />
-      <workItem from="1489671386869" duration="9121000" />
-      <workItem from="1489741598461" duration="11768000" />
-      <workItem from="1489837919008" duration="395000" />
-      <workItem from="1489839981296" duration="2533000" />
-      <workItem from="1489941071795" duration="7190000" />
-      <workItem from="1489995488013" duration="21000" />
-      <workItem from="1489998695595" duration="5684000" />
-      <workItem from="1490015780481" duration="616000" />
-      <workItem from="1490022200108" duration="6514000" />
-      <workItem from="1490033332171" duration="2899000" />
-      <workItem from="1490089756810" duration="3870000" />
-      <workItem from="1490104653050" duration="39000" />
-      <workItem from="1490105008497" duration="1057000" />
-      <workItem from="1490118973071" duration="607000" />
-      <workItem from="1490126987060" duration="2039000" />
-      <workItem from="1490180541649" duration="5529000" />
-      <workItem from="1490198133822" duration="1594000" />
-      <workItem from="1490345178915" duration="8018000" />
-      <workItem from="1490368905818" duration="286000" />
-      <workItem from="1490447984436" duration="43000" />
-      <workItem from="1490448147764" duration="4146000" />
-      <workItem from="1490597024867" duration="18654000" />
-      <workItem from="1490642673838" duration="2311000" />
-      <workItem from="1490704166338" duration="30000" />
-      <workItem from="1490705325333" duration="44000" />
-      <workItem from="1490722830228" duration="1659000" />
-      <workItem from="1490730643768" duration="1934000" />
-      <workItem from="1490777629430" duration="4802000" />
-      <workItem from="1490788310582" duration="1098000" />
-      <workItem from="1490794581968" duration="2078000" />
-      <workItem from="1490818462481" duration="1643000" />
-      <workItem from="1490962802935" duration="644000" />
-      <workItem from="1491044560467" duration="741000" />
-      <workItem from="1491056122947" duration="1085000" />
-      <workItem from="1491058099790" duration="878000" />
-      <workItem from="1491123970169" duration="1158000" />
-      <workItem from="1491157574263" duration="1100000" />
-      <workItem from="1491218363234" duration="1763000" />
-      <workItem from="1491236903316" duration="1874000" />
-      <workItem from="1491239727241" duration="645000" />
-      <workItem from="1491327226242" duration="1208000" />
-      <workItem from="1491461599373" duration="383000" />
-      <workItem from="1491472143381" duration="598000" />
-      <workItem from="1491559063584" duration="16000" />
-      <workItem from="1491559228351" duration="1430000" />
-      <workItem from="1491568616379" duration="711000" />
-      <workItem from="1491814782555" duration="25000" />
-      <workItem from="1491820046499" duration="661000" />
-      <workItem from="1491927310064" duration="1244000" />
-      <workItem from="1491991544102" duration="206000" />
-      <workItem from="1491991893397" duration="206000" />
-      <workItem from="1491993728302" duration="693000" />
-      <workItem from="1492207683522" duration="327000" />
-      <workItem from="1492289336599" duration="11000" />
-      <workItem from="1492595409409" duration="1633000" />
-      <workItem from="1492597074833" duration="268000" />
-      <workItem from="1492687956905" duration="1697000" />
-      <workItem from="1493571118154" duration="861000" />
-      <workItem from="1493620658635" duration="3405000" />
-      <workItem from="1493650769498" duration="29000" />
-      <workItem from="1493652649633" duration="518000" />
-      <workItem from="1493815857232" duration="644000" />
-      <workItem from="1494355962657" duration="1284000" />
-      <workItem from="1494434808278" duration="39000" />
-      <workItem from="1494448635531" duration="2403000" />
-      <workItem from="1494594469899" duration="3919000" />
-      <workItem from="1494610473360" duration="1081000" />
-      <workItem from="1494841221846" duration="354000" />
-      <workItem from="1495021232022" duration="366000" />
-      <workItem from="1495526522794" duration="1016000" />
-      <workItem from="1495539927841" duration="14000" />
-      <workItem from="1495633940079" duration="620000" />
-      <workItem from="1496136797867" duration="680000" />
-      <workItem from="1496137880523" duration="60000" />
-      <workItem from="1496153210329" duration="16000" />
-      <workItem from="1496231995784" duration="11000" />
-      <workItem from="1496233761556" duration="88000" />
-      <workItem from="1496299249251" duration="860000" />
-      <workItem from="1496307872258" duration="1147000" />
-      <workItem from="1496311069463" duration="2373000" />
-      <workItem from="1496328115059" duration="1346000" />
-      <workItem from="1496397945446" duration="665000" />
-      <workItem from="1496408735868" duration="136000" />
-      <workItem from="1497274730564" duration="1155000" />
-      <workItem from="1497357776570" duration="512000" />
-      <workItem from="1498305496134" duration="613000" />
-      <workItem from="1498475657442" duration="53000" />
-      <workItem from="1499376808500" duration="1437000" />
-      <workItem from="1499709932573" duration="150000" />
-      <workItem from="1501100295730" duration="5000" />
+      <updated>1501101100184</updated>
+      <workItem from="1501101102302" duration="31000" />
+      <workItem from="1501101143342" duration="162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="544959000" />
+    <option name="totallyTimeSpent" value="193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1932" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14681296" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -906,556 +181,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="202" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_later/CHAT_API.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/connectdb.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/analyticstracking.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/nav.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/PCO_API.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/phpimports.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/imports.php" />
-    <entry file="file://$PROJECT_DIR$/user_later/test.php" />
-    <entry file="file://$PROJECT_DIR$/activate.php">
+    <entry file="file://$PROJECT_DIR$/includes/HTMLPurifier.standalone.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="90" column="39" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="167" column="72" lean-forward="false" selection-start-line="167" selection-start-column="72" selection-end-line="167" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/author.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="164" column="72" lean-forward="false" selection-start-line="164" selection-start-column="72" selection-end-line="164" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/messenger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2362">
-          <caret line="164" column="72" lean-forward="false" selection-start-line="164" selection-start-column="72" selection-end-line="164" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parklist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="73" column="72" lean-forward="false" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parkrequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="128" column="72" lean-forward="false" selection-start-line="128" selection-start-column="72" selection-end-line="128" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1806">
-          <caret line="86" column="72" lean-forward="false" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5628">
-          <caret line="268" column="72" lean-forward="false" selection-start-line="268" selection-start-column="72" selection-end-line="268" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3003">
-          <caret line="143" column="72" lean-forward="false" selection-start-line="143" selection-start-column="72" selection-end-line="143" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writearticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vacature.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/videos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/js/masonry.pkgd.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2562">
-          <caret line="122" column="72" lean-forward="false" selection-start-line="122" selection-start-column="72" selection-end-line="122" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat-api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php" />
-    <entry file="file://$PROJECT_DIR$/includes/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="55" column="183" lean-forward="false" selection-start-line="55" selection-start-column="183" selection-end-line="55" selection-end-column="183" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public-api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <marker date="1489579140080" expanded="true" signature="446:496" ph="SELECT ID, f... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="939:986" ph="SELECT ID, h... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="1361:1406" ph="SELECT ID, l... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="1775:1818" ph="SELECT ID, i... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="2192:2244" ph="SELECT ID, d... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="2635:2686" ph="SELECT ID, b... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="3070:3115" ph="SELECT ID, n... pco_parks" />
-            <marker date="1489579140080" expanded="true" signature="3457:3556" ph="SELECT ID, f... pco_parks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed-api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parkcraft.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="81" column="72" lean-forward="false" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/park.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2037">
-          <caret line="99" column="71" lean-forward="false" selection-start-line="99" selection-start-column="71" selection-end-line="99" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/FEED_API.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/CHAT_API.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4431">
-          <caret line="211" column="140" lean-forward="false" selection-start-line="211" selection-start-column="139" selection-end-line="211" selection-end-column="140" />
-          <folding>
-            <marker date="1491044985426" expanded="true" signature="11377:11831" ph="..." />
-            <marker date="1491044985426" expanded="false" signature="11498:11529" ph="..." />
-            <marker date="1491044985426" expanded="true" signature="11664:11748" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/recaptchalib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="139" column="2" lean-forward="false" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/phpimports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/imports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="37" column="54" lean-forward="false" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2562">
-          <caret line="122" column="10" lean-forward="false" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/connectdb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/API.php" />
-    <entry file="file://$PROJECT_DIR$/plugins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="15" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20170412160245.pdf.png" />
-    <entry file="file://$PROJECT_DIR$/staff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/PCO_API.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="1517" column="48" lean-forward="false" selection-start-line="1517" selection-start-column="48" selection-end-line="1517" selection-end-column="48" />
-          <folding>
-            <element signature="n#loginWithCookie#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#createSessionID#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#login#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#hasAccess#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#isActivated#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getActivationCode#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#exist#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getUUIDFromEmail#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#existUUID#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getUUIDFromID#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getIDFromUUID#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getName#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getEmail#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getPrefix#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getLabel#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getNameByUUID#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getRank#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getRankByUUID#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getCurrentPassword#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#IsFollowingPark#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#IsActivationCodeValid#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#IsPasswordCodeValid#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#activateAccount#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#changePassword#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#changeForgotPassword#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#sendActivationMail#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#sendChangePassword#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#sendEmail#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#loadFollowedParks#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#loadAllUsers#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#loadAllUsersSearch#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#loadUserIn#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#sendEmailToEveryone#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#isPlayerFollowingAnyPark#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getTimeNow#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#setLastExcecution#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getLastExcecution#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#setReceiveNewsEmails#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getReceiveNewsEmails#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#sendActivationMailToAll#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#setReceiveReactionEmails#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getReceiveReactionEmails#0;n#user#0;n#!!top" expanded="false" />
-            <element signature="n#getParkID#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#isDeleted#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#deletepost#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#undeletepost#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#deletepoststaff#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#undeletepoststaff#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#post#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#exist#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#loadArticlesPark#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#loadArticles#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#loadArticle#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#loadReactions#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#getReactionCount#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#editArticle#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#PlaceReaction#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#sendReactionEmail#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#RemoveReaction#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#getTitle#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#loadAllReactions#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#loadAllPosts#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#like#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#unlike#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#isLiking#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#countLikes#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#LoadLikes#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#getOwnerEmail#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getUUIDFromStaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#removestaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#addstaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#changeOwner#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#editstaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getStaffPrefix#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#loadstaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#loadarticles#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#updatesettings#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getParkRequestRequester#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getParkRequestName#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#refuserequest#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#acceptrequest#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#loadrequests#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#request#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getName#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getBackrgound#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getLogo#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getHeader#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getDescription#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getIp#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#isDeleted#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getEmail#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#IsUserStaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#IsUserOwner#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#CanEditSettings#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#CanWriteArticle#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#CanManageStaff#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#CanManageRides#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#CanManageJobs#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#unfollow#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#follow#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#loadWhoToFollow#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#exist#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getFollowers#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#LoadParksSearch#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#LoadParks#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#LoadParksList#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#getParkIdFromAPIKey#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#LoadFollowers#0;n#park#0;n#!!top" expanded="false" />
-            <element signature="n#random#0;n#common#0;n#!!top" expanded="false" />
-            <element signature="n#uploadimagenotmp#0;n#common#0;n#!!top" expanded="false" />
-            <element signature="n#uploadimage#0;n#common#0;n#!!top" expanded="false" />
-            <element signature="n#makeUrls#0;n#common#0;n#!!top" expanded="false" />
-            <element signature="n#getIpOfClient#0;n#common#0;n#!!top" expanded="false" />
-            <element signature="n#closetags#0;n#common#0;n#!!top" expanded="false" />
-            <element signature="n#parks#0;n#nav#0;n#!!top" expanded="false" />
-            <element signature="n#search#0;n#!!top" expanded="false" />
-            <element signature="n#loadParks#0;n#search#0;n#!!top" expanded="false" />
-            <element signature="n#load#0;n#search#0;n#!!top" expanded="false" />
-            <element signature="n#isMaintenanceModeOn#0;n#system#0;n#!!top" expanded="false" />
-            <element signature="n#copyRightSign#0;n#system#0;n#!!top" expanded="false" />
-            <element signature="n#addPageVisit#0;n#system#0;n#!!top" expanded="false" />
-            <element signature="n#getDateNow#0;n#system#0;n#!!top" expanded="false" />
-            <element signature="n#getBackground#0;n#system#0;n#!!top" expanded="false" />
-            <element signature="n#skycraper#0;n#ads#0;n#!!top" expanded="false" />
-            <element signature="n#vierkant#0;n#ads#0;n#!!top" expanded="false" />
-            <element signature="n#canUseStaffPanel#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageParkRequests#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageUsers#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageParks#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageComments#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canSendMail#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManagePosts#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageApplications#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageJobs#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#canManageChats#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#remoteAccount#0;n#staff#0;n#!!top" expanded="false" />
-            <element signature="n#loadHelp#0;n#help#0;n#!!top" expanded="false" />
-            <element signature="n#getRideStatus#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#getShowStatus#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#getRides#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#getShows#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#loadrides#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#addshow#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#addride#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#removeride#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#generateRideCode#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#rideCodeExist#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#loadForParkPage#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#getLabelRide#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#getLabelShow#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#updateStatus#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#rideExist#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#isRideOfPark#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#countRidesOfPark#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#updateShowStatus#0;n#rides#0;n#!!top" expanded="false" />
-            <element signature="n#generateAPIKey#0;n#API#0;n#!!top" expanded="false" />
-            <element signature="n#APIKeyExist#0;n#API#0;n#!!top" expanded="false" />
-            <element signature="n#getKeyOfPark#0;n#API#0;n#!!top" expanded="false" />
-            <element signature="n#keyExist#0;n#API#0;n#!!top" expanded="false" />
-            <element signature="n#IsAuthor#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#canWriteTutorials#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#canWritePluginVanDeWeek#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#canWriteParkVanDeMaand#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#loadTutorials#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#postTutorial#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#loadTutorial#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#likeTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#unlikeTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#isLikingTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#countLikesTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#LoadLikesTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#existTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#getTitleTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#loadReactionsTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#getReactionCountTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#PlaceReactionTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#RemoveReactionTut#0;n#parkcraft#0;n#!!top" expanded="false" />
-            <element signature="n#getVideos#0;n#youtube#0;n#!!top" expanded="false" />
-            <element signature="n#load#0;n#events#0;n#!!top" expanded="false" />
-            <element signature="n#parkRequestsRejected#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#parks#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#parkEvents#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#parkRides#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#parkStaff#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#posts#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#reactions#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#users#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#usersActivated#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#totalPageVisits#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#articleVisit#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#getCountsArticles#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#getTodayUniqueVisitors#0;n#statistics#0;n#!!top" expanded="false" />
-            <element signature="n#loadVacatures#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#vacaturesCount#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#loadVacaturesSettings#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#loadVacaturesStaff#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#addVacature#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#editVacature#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#removeVacature#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#unremoveVacature#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#excist#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#getName#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#apply#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="e#227321#227868#0#PHP" expanded="false" />
-            <element signature="e#228132#228703#0#PHP" expanded="false" />
-            <element signature="e#228966#229519#0#PHP" expanded="false" />
-            <element signature="e#229782#230329#0#PHP" expanded="false" />
-            <element signature="n#countApplications#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#loadApplications#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#loadApplicationsStaff#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#loadAllVacatures#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#CountAllVacatures#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#removeApplication#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#loadAllVacaturesSearch#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#opnieuwAanbieden#0;n#vacature#0;n#!!top" expanded="false" />
-            <element signature="n#exist#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#getName#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#getProfilePicture#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#getAbout#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#getMC#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#getActiveJobsOnParkCraft#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#userpage#0;n#!!top" expanded="false" />
-            <element signature="n#loadReactionsOfUser#0;n#userpage#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parksettings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="641" column="53" lean-forward="false" selection-start-line="641" selection-start-column="53" selection-end-line="641" selection-end-column="53" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -278,6 +278,30 @@ if(isset($_GET['keywords'])) {
                                                 article::loadAllPosts($mysqli, $pageid);
                                             }
                                         }
+                                    } else if(isset($_GET['reviewposts']) && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
+                                        if(isset($_GET['page'])) {
+                                            if($_GET['page'] != 0) {
+                                                $pageid = $_GET['page'] - 1;
+                                                article::loadReviewPosts($mysqli, $pageid);
+                                            }
+                                        }
+                                    
+                                    } else if(isset($_GET['deletedposts']) && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
+                                        if(isset($_GET['page'])) {
+                                            if($_GET['page'] != 0) {
+                                                $pageid = $_GET['page'] - 1;
+                                                article::loadDeletedPosts($mysqli, $pageid);
+                                            }
+                                        }
+                                    
+                                    } else if(isset($_GET['rejectedposts']) && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
+                                        if(isset($_GET['page'])) {
+                                            if($_GET['page'] != 0) {
+                                                $pageid = $_GET['page'] - 1;
+                                                article::loadRejectedPosts($mysqli, $pageid);
+                                            }
+                                        }
+                                    
                                     } else if(isset($_GET['mail'])) {
                                         if(!staff::canSendMail($mysqli, $_SESSION['UUID'])) {
                                             header("Location: staff.php?warning=Geen toegang tot dit gedeelte.");

@@ -102,10 +102,5 @@
             $(this).parent().find("ul").parent().find("li.dropdown").addClass('open');
         });
     </script>
-    <script>
-        function countmessages() {
-            $('#chatcounts').load('/chat-api.php?chatcount');
-        }
-        setInterval(countmessages, 5000);
-    </script>
+  
 </nav>
