@@ -13,8 +13,7 @@ if(isset($_GET['accept']) && isset($_SESSION['UUID'])) {
   if(article::statusArticle($mysqli, $id) == 0 && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
     $id = $_GET['id'];
 
-    if(article::statusArticle($mysqli, $id) == 0 && article::acceptArticle($mysqli, $id)) {
-          $info = "Artikel is nu goedgekeurd";
+    if(article::acceptArticle($mysqli, $id) && article::statusArticle($mysqli, $id) == 0) {
 		  header("Location: article.php?id=" . $id . "&info=Artikel goed gekeurd");
     } else {
       $warning = "Er is iets fout gegaan, probeer opnieuw!";
@@ -29,8 +28,7 @@ if(isset($_GET['reject']) && isset($_SESSION['UUID'])) {
   if(article::statusArticle($mysqli, $id) == 0 && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
     $id = $_GET['id'];
 
-    if(article::statusArticle($mysqli, $id) == 0 && article::rejectArticle($mysqli, $id)) {
-          $danger = "Artikel is nu afgekeurd";
+    if(article::rejectArticle($mysqli, $id) && article::statusArticle($mysqli, $id) == 0) {
 		  header("Location: article.php?id=" . $id . "&danger=Artikel afgekeurd");
     } else {
       $warning = "Er is iets fout gegaan, probeer opnieuw!";

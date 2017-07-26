@@ -1370,7 +1370,7 @@ class user {
                 if(!park::isDeleted($mysqli, $row['ID'])){
                     $logo = $row['logo'];
                     if(empty($row['logo'])) {
-                       $logo = 'resources/defaultavatar.png';
+                        $logo = 'resources/defaultavatar.png';
                     }
                     $name = $row['name'];
                     $parkid = $row['ID'];
@@ -2116,13 +2116,13 @@ class article {
             $postid = $row['ID'];
             $title = $row['post_title'];
             if(!($row['post_poster'] == $_SESSION['UUID'])) {
-              if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
-                continue;
-              }
+                if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
+                    continue;
+                }
             } else {
-              if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
-                $title = '<span class="label label-info">Wacht op bevestiging</span> ' . $title;
-              }
+                if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
+                    $title = '<span class="label label-info">Wacht op bevestiging</span> ' . $title;
+                }
             }
 
             $parkname = park::getName($mysqli, $row['park_id']);
@@ -2295,7 +2295,7 @@ class article {
         $logo = park::getLogo($mysqli, $row['park_id']);
         $body = $row['post_body'];
         $body = common::closetags(common::makeUrls($body));
-		$body = str_replace("[enter]", "<br />", $body);
+        $body = str_replace("[enter]", "<br />", $body);
         $postimages = $row['post_images'];
         if(strpos($postimages, 'Invalid URL') !== false) {
             $postimages = park::getHeader($mysqli, $row['park_id']);
@@ -2321,13 +2321,13 @@ class article {
                     <a href="park.php?id='.$row['park_id'].'"><span style="style="color: black; font-weight: bold;">'.$parkname.'</span></a>
                 </div>
                 <div>';
-                $imgs = explode(",", $postimages);
-                $count = count($imgs)-1;
-                if($count == 0 && strpos($postimages, ',') !== true) {
-                    echo '<img src="' . str_replace(',', '', $imgs[0]) . '" alt="header" class="img-responsive center-block" style="max-height: 300px;">';
-                } else {
-                    echo '<img src="' . str_replace(',', '', $postimages) . '" alt="header" class="img-responsive center-block" style="max-height: 300px;">';
-                }
+        $imgs = explode(",", $postimages);
+        $count = count($imgs)-1;
+        if($count == 0 && strpos($postimages, ',') !== true) {
+            echo '<img src="' . str_replace(',', '', $imgs[0]) . '" alt="header" class="img-responsive center-block" style="max-height: 300px;">';
+        } else {
+            echo '<img src="' . str_replace(',', '', $postimages) . '" alt="header" class="img-responsive center-block" style="max-height: 300px;">';
+        }
         echo'</div>
                 <h3>'.$title.'</h3>
                 <span>'.$body.'</span>
@@ -2345,16 +2345,16 @@ class article {
         ';
     }
     static function acceptArticle($mysqli, $id) {
-      $sql = "UPDATE pco_posts SET reviewed='1' WHERE ID='$id'";
-      $result = mysqli_query($mysqli, $sql);
-      $sql1 = "SELECT * FROM pco_posts WHERE ID='$id' AND reviewed='1'";
-      $result1 = mysqli_query($mysqli, $sql1);
-      $count1 = mysqli_num_rows($result1);
-      if($count1 > 0) {
-          return true;
-      } else {
-          return false;
-      }
+        $sql = "UPDATE pco_posts SET reviewed='1' WHERE ID='$id'";
+        $result = mysqli_query($mysqli, $sql);
+        $sql1 = "SELECT * FROM pco_posts WHERE ID='$id' AND reviewed='1'";
+        $result1 = mysqli_query($mysqli, $sql1);
+        $count1 = mysqli_num_rows($result1);
+        if($count1 > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
     static function rejectArticle($mysqli, $id) {
         $sql = "UPDATE pco_posts SET reviewed='2' WHERE ID='$id'";
@@ -2369,27 +2369,27 @@ class article {
         }
     }
 
-  	static function statusArticle($mysqli, $id) {
-      $sql="SELECT * FROM pco_posts WHERE ID='$id'";
-      $result = mysqli_query($mysqli, $sql);
-      $count = mysqli_num_rows($result);
-      $row = mysqli_fetch_assoc($result);
-      if($count > 0) {
-        return $row["reviewed"];
-      } else {
-      return false;
+    static function statusArticle($mysqli, $id) {
+        $sql="SELECT * FROM pco_posts WHERE ID='$id'";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
+        if($count > 0) {
+            return $row["reviewed"];
+        } else {
+            return false;
+        }
     }
-  }
     static function authorID($mysqli, $id) {
-      $sql="SELECT * FROM pco_posts WHERE ID='$id'";
-      $result = mysqli_query($mysqli, $sql);
-      $count = mysqli_num_rows($result);
-      $row = mysqli_fetch_assoc($result);
-      if($count > 0) {
-        return $row['post_poster'];
-      } else {
-      return false;
-    }
+        $sql="SELECT * FROM pco_posts WHERE ID='$id'";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
+        if($count > 0) {
+            return $row['post_poster'];
+        } else {
+            return false;
+        }
     }
     static function loadReactions($mysqli, $id) {
         $sql = "SELECT * FROM pco_reaction WHERE article_id='$id'";
@@ -2637,7 +2637,7 @@ class article {
     }
     static function loadReviewPosts($mysqli, $pageid) {
         $pageposts = $pageid*50;
-        $sql="SELECT * FROM pco_posts WHERE deleted NOT IN ('1', '2') AND reviewed NOT IN ('1') ORDER BY ID DESC LIMIT $pageposts, 50";
+        $sql="SELECT * FROM pco_posts WHERE deleted NOT IN ('1', '2') AND reviewed NOT IN ('1' , '2') ORDER BY ID DESC LIMIT $pageposts, 50";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if ($count > 0) {
@@ -2697,9 +2697,9 @@ class article {
             <p>Geen artikelen gevonden op deze pagina.</p>';
         }
     }
-	static function loadRejectedPosts($mysqli, $pageid) {
+    static function loadRejectedPosts($mysqli, $pageid) {
         $pageposts = $pageid*50;
-        $sql="SELECT * FROM pco_posts WHERE reviewed='2' AND removed='0' ORDER BY ID DESC LIMIT $pageposts, 50";
+        $sql="SELECT * FROM pco_posts WHERE deleted NOT IN ('1', '2') AND reviewed NOT IN ('0', '1') ORDER BY ID DESC LIMIT $pageposts, 50";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if ($count > 0) {
@@ -2724,7 +2724,6 @@ class article {
                 $id = $row['ID'];
                 $parkid = $row['park_id'];
                 $title = $row['post_title'];
-                $deleted = $row['deleted'];
                 echo '<tr>';
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
@@ -2760,7 +2759,7 @@ class article {
             <p>Geen artikelen gevonden op deze pagina.</p>';
         }
     }
-	static function loadDeletedPosts($mysqli, $pageid) {
+    static function loadDeletedPosts($mysqli, $pageid) {
         $pageposts = $pageid*50;
         $sql="SELECT * FROM pco_posts WHERE deleted='2' ORDER BY ID DESC LIMIT $pageposts, 50";
         $result = mysqli_query($mysqli, $sql);
@@ -2792,7 +2791,7 @@ class article {
                 echo '<tr>';
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
-				echo '<td><p style="word-wrap: break-word;">'.article::getReactionCount($mysqli, $id).'</p></td>';
+                echo '<td><p style="word-wrap: break-word;">'.article::getReactionCount($mysqli, $id).'</p></td>';
                 echo '<td><a href="staff.php?posts=' . $id . '&undoremovepost=&pi='.($pageid + 1).'" class="btn btn-info btn-sm">Verwijderen ongedaan maken</a></td>';
                 echo '</tr>';
             }
@@ -2861,7 +2860,7 @@ class article {
         $count=mysqli_num_rows($result);
         $row = mysqli_fetch_assoc($result);
         $reviewed = explode(",", $row['reviewed']);
-        return $likes;
+        return $reviewed;
     }
     static function LoadLikes($mysqli, $postid) {
         $sql="SELECT * FROM pco_posts WHERE ID='$postid'";
@@ -3227,17 +3226,17 @@ class park {
                     </tr>
                 </thead>
                 <tbody>';
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo '<tr>';
-                    echo '<td>'.$row["name"].'</td>';
-                    echo '<td>'.$row["ip"].'</td>';
-                    echo '<td>'.$row["twitter"].'</td>';
-                    echo '<td>'.$row["email"].'</td>';
-                    echo '<td><a href="user.php?id='.user::getIDFromUUID($mysqli, $row["requester"]).'">'.user::getNameByUUID($mysqli, $row["requester"]).'</a></td>';
-                    echo '<td><a href="staff.php?parkrequest=&refuse='.$row['ID'].'" class="btn-danger">Weigeren</a><br/><a href="staff.php?parkrequest=&accept='.$row['ID'].'" class="btn-success">Accepteren</a></td>';
-                    echo '</tr>';
-                }
-                echo '</tbody>
+            while($row = mysqli_fetch_assoc($result)) {
+                echo '<tr>';
+                echo '<td>'.$row["name"].'</td>';
+                echo '<td>'.$row["ip"].'</td>';
+                echo '<td>'.$row["twitter"].'</td>';
+                echo '<td>'.$row["email"].'</td>';
+                echo '<td><a href="user.php?id='.user::getIDFromUUID($mysqli, $row["requester"]).'">'.user::getNameByUUID($mysqli, $row["requester"]).'</a></td>';
+                echo '<td><a href="staff.php?parkrequest=&refuse='.$row['ID'].'" class="btn-danger">Weigeren</a><br/><a href="staff.php?parkrequest=&accept='.$row['ID'].'" class="btn-success">Accepteren</a></td>';
+                echo '</tr>';
+            }
+            echo '</tbody>
             </table>';
             $sql1="SELECT * FROM pco_parks";
             $result1 = mysqli_query($mysqli, $sql1);
@@ -3966,7 +3965,7 @@ class search {
         }
     }
     static function load($mysqli, $keywords) {
-        $sql = "SELECT * FROM pco_posts WHERE post_title LIKE '%{$keywords}%' AND deleted='0' OR post_body LIKE '%{$keywords}%' AND deleted='0' order by ID desc LIMIT 40";
+        $sql = "SELECT * FROM pco_posts WHERE post_title LIKE '%{$keywords}%' AND reviewed='1' AND deleted='0' OR post_body LIKE '%{$keywords}%' AND deleted='0' AND reviewed='1' order by ID desc LIMIT 40";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         while($row = mysqli_fetch_assoc($result)) {
@@ -4871,14 +4870,14 @@ class parkcraft {
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         while($row = mysqli_fetch_assoc($result)) {
-                $rowid = $row['ID'];
-                echo '
+            $rowid = $row['ID'];
+            echo '
                 <span class="label ' . user::getLabel($mysqli, user::getRankByUUID($mysqli, $row['uuid'])) . '">' . user::getPrefix($mysqli, user::getRankByUUID($mysqli, $row['uuid'])) . '</span><span> ' . user::getNameByUUID($mysqli, $row['uuid']) . '</span>
                 <p>' . $row['reaction'] . '</p>';
-                if ($row['uuid'] == $_SESSION['UUID'] || staff::canManageComments($mysqli, $_SESSION['UUID'])) {
-                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">Verwijder</a>';
-                }
-                echo '<hr />';
+            if ($row['uuid'] == $_SESSION['UUID'] || staff::canManageComments($mysqli, $_SESSION['UUID'])) {
+                echo '<a href="?remove=' . $rowid . '&id=' . $id . '">Verwijder</a>';
+            }
+            echo '<hr />';
         }
     }
     static function getReactionCountTut($mysqli, $id) {
@@ -4916,16 +4915,16 @@ class youtube {
         curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
         $json = curl_exec($ch);
         $result = json_decode($json, true);
-            foreach($result['items'] as $items) {
-                $title = $items['snippet']['title'];
-                $thumbnail = $items['snippet']['thumbnails']['default']['url'];
-                $description = $items['snippet']['description'];
-                $videoid = $items['id']['videoId'];
-                echo "<hr /><div class='hover'data-toggle='modal' data-target='#".$videoid."'>"
-                    ."<img src='".$thumbnail."' style='border:none;float:left;margin-right:10px;' alt='".$title."' title='".$title."' />"
-                    ."<h3><span>".$title."</span></h3>".$description
-                    ."</div>";
-                echo '
+        foreach($result['items'] as $items) {
+            $title = $items['snippet']['title'];
+            $thumbnail = $items['snippet']['thumbnails']['default']['url'];
+            $description = $items['snippet']['description'];
+            $videoid = $items['id']['videoId'];
+            echo "<hr /><div class='hover'data-toggle='modal' data-target='#".$videoid."'>"
+                ."<img src='".$thumbnail."' style='border:none;float:left;margin-right:10px;' alt='".$title."' title='".$title."' />"
+                ."<h3><span>".$title."</span></h3>".$description
+                ."</div>";
+            echo '
                         <div id="'.$videoid.'" class="modal fade" role="dialog">
                           <div class="modal-dialog">
 
@@ -4944,7 +4943,7 @@ class youtube {
 
                           </div>
                         </div>';
-            }
+        }
     }
 }
 class events {
@@ -5125,7 +5124,7 @@ class vacature {
                 $name = $row['job_name'];
                 $description = $row['job_description'];
                 $id = $row['ID'];
-                    echo '
+                echo '
                             <div class="jumbotron">
                                 <div class="hover" id="' . $id . '">
                                     <h4>Vacature: ' . $name . '</h4>
@@ -5143,7 +5142,7 @@ class vacature {
 
 
                             ';
-                }
+            }
         } else {
             echo '
                         <div class="jumbotron">

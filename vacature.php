@@ -67,7 +67,7 @@ if(isset($_POST['submit'])) {
 
     if (!empty($naam) && !empty($reden) && !empty($email) && !empty($skype) && !empty($kennis) && !empty($extra) && !empty($about)) {
         vacature::apply($mysqli, $naam, $about, $reden, $email, $skype, $kennis, $extra, $job_id);
-        $info= "Bedankt voor het solliciteren, uw sollicitatie wordt zo snel mogelijk behandelt.";
+        $info= "Bedankt voor het solliciteren, uw sollicitatie wordt zo snel mogelijk behandeld.";
         $naam = '';
         $reden = '';
         $email = '';
