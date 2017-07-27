@@ -2324,9 +2324,67 @@ class article {
         $imgs = explode(",", $postimages);
         $count = count($imgs)-1;
         if($count == 0 && strpos($postimages, ',') !== true) {
-            echo '<img src="' . str_replace(',', '', $imgs[0]) . '" alt="header" class="img-responsive center-block" style="max-height: 300px;">';
+            echo '<img src="' . str_replace(',', '', $imgs[0]) . '" alt="' .$title. '" class="img-responsive center-block hover" id="headImg" style="max-height: 300px;">
+	          <!-- The Modal -->
+                     <div id="headModal" class="modal">
+  			<span class="close">&times;</span>
+ 			<img class="modal-content" id="img01">
+ 			<div id="caption"></div>
+                     </div>
+		    
+		    <script>
+                    // Get the modal
+                      var modal = document.getElementById(\'headModal\');
+
+                   // Get the image and insert it inside the modal - use its "alt" text as a caption
+                      var img = document.getElementById(\'headImg\');
+                      var modalImg = document.getElementById("img01");
+                      var captionText = document.getElementById("caption");
+                      img.onclick = function(){
+                          modal.style.display = "block";
+                          modalImg.src = this.src;
+                          captionText.innerHTML = this.alt;
+                      }
+
+                   // Get the <span> element that closes the modal
+                      var span = document.getElementsByClassName("close")[0];
+
+                   // When the user clicks on <span> (x), close the modal
+                      span.onclick = function() { 
+                           modal.style.display = "none";
+                      }
+                   </script>';
         } else {
-            echo '<img src="' . str_replace(',', '', $postimages) . '" alt="header" class="img-responsive center-block" style="max-height: 300px;">';
+            echo '<img src="' . str_replace(',', '', $postimages) . '" alt="' .$title. '" class="img-responsive center-block hover" id="headImg" style="max-height: 300px;">
+	          <!-- The Modal -->
+                     <div id="headModal" class="modal">
+  			<span class="close">&times;</span>
+ 			<img class="modal-content" id="img01">
+ 			<div id="caption"></div>
+                     </div>
+		    
+		    <script>
+                    // Get the modal
+                      var modal = document.getElementById(\'headModal\');
+
+                   // Get the image and insert it inside the modal - use its "alt" text as a caption
+                      var img = document.getElementById(\'headImg\');
+                      var modalImg = document.getElementById("img01");
+                      var captionText = document.getElementById("caption");
+                      img.onclick = function(){
+                          modal.style.display = "block";
+                          modalImg.src = this.src;
+                          captionText.innerHTML = this.alt;
+                      }
+
+                   // Get the <span> element that closes the modal
+                      var span = document.getElementsByClassName("close")[0];
+
+                   // When the user clicks on <span> (x), close the modal
+                      span.onclick = function() { 
+                           modal.style.display = "none";
+                      }
+                   </script>';
         }
         echo'</div>
                 <h3>'.$title.'</h3>
