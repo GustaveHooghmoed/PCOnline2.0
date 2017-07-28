@@ -173,7 +173,10 @@ statistics::articleVisit($mysqli, $_SESSION['UUID'], $id);
                                             background-image: none;
                                         }
                                     </style>
-                                    <?php article::loadArticle($mysqli, $id);?>
+                                    <?php article::loadArticle($mysqli, $id);
+                                        ads::vierkant($mysqli, basename(__FILE__));
+                                    ?>
+
                                 </div>
                             </div>
                         </div>

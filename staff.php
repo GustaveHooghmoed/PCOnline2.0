@@ -153,8 +153,9 @@ if(isset($_POST['addad'])) {
     }
     $name = $_POST['name'];
     $code = $_POST['code'];
+    $pages = $_POST['pages'];
     $sort = $_POST['sort'];
-    ads::addAd($mysqli, $name, $code, $sort);
+    ads::addAd($mysqli, $name, $code, $sort, $pages);
     header("Location: staff.php?ads=&info=Advertentie toegevoegd");
     exit;
 }
@@ -327,6 +328,10 @@ if(isset($_GET['keywords'])) {
                                                 <div class="">
                                                     <label><input type="radio" name="sort" value="1">Vierkant</label>
                                                 </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="page"><span class="text-info">Pagina's waarom de advertentie gezien moet worden</span></label>
+                                                <input type="text" name="page" id="page" placeholder="Vul hier de paginas in." class="form-control" autofocus="autofocus" required="required">
                                             </div>
                                             <div class="text-center">
                                                 <button type="submit" class="btn btn-raised btn-success" name="addad" >Toevoegen</button>

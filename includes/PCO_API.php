@@ -4184,10 +4184,10 @@ class ads {
             $result = mysqli_query($mysqli, $sql);
         }
     }
-    static function addAd($mysqli, $name, $code, $sort) {
+    static function addAd($mysqli, $name, $code, $sort, $pages) {
         $user = $_SESSION['UUID'];
         if(staff::canManageadvertisements($mysqli, $user)) {
-            $sql = "INSERT INTO pco_ads (ad_name, ad_code, ad_sort) VALUES ('$name', '$code', '$sort')";
+            $sql = "INSERT INTO pco_ads (ad_name, ad_code, ad_sort, ad_pages) VALUES ('$name', '$code', '$sort', '$pages')";
             $result = mysqli_query($mysqli, $sql);
         }
     }
@@ -4203,6 +4203,7 @@ class ads {
                             <th>ID</th>
                             <th>Name</th>
                             <th>Soort</th>
+                            <th>Te zien op</th>
                             <th>Opties</th>
                         </tr>
                     </thead>';
@@ -4211,10 +4212,12 @@ class ads {
                 $id = $row['ID'];
                 $name = $row['ad_name'];
                 $soort = $row['ad_sort'] == 0 ? 'Skycraper' : 'Vierkant';
+                $pages = $row['ad_pages'];
                 echo '<tr>';
                 echo '<td>'.$id.'</td>';
                 echo '<td>'.$name.'</td>';
                 echo '<td>'.$soort.'</td>';
+                echo '<td>'.$pages.'</td>';
                 echo '<td><a href="staff.php?ads=&removead=' . $id . '" class="btn btn-danger btn-sm">Verwijderen</a></td>';
                 echo '</tr>';
             }
@@ -4237,7 +4240,7 @@ class ads {
         $ranorder = $randomorder[array_rand($randomorder,1)];
 
 
-        $sql = "SELECT * FROM pco_ads WHERE ad_pages='$page[0]' AND ad_sort='0' order by ".$ranrow." ".$ranorder;
+        $sql = "SELECT * FROM pco_ads WHERE ad_pages LIKE'%$page[0]%' AND ad_sort='0' order by ".$ranrow." ".$ranorder;
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
 
@@ -4271,7 +4274,7 @@ class ads {
         $ranorder = $randomorder[array_rand($randomorder,1)];
 
 
-        $sql = "SELECT * FROM pco_ads WHERE ad_pages='$page[0]' AND ad_sort='1' order by ".$ranrow." ".$ranorder;
+        $sql = "SELECT * FROM pco_ads WHERE ad_pages LIKE '%$page[0]%' AND ad_sort='1' order by ".$ranrow." ".$ranorder;
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
 
