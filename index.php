@@ -121,6 +121,11 @@ if(isset($_COOKIE["pcoemail"]) && isset($_COOKIE["pcosessionid"])) {
                 <div class="panel-heading text-center">Inloggen op ParkCraft Online</div>
                 <div class="panel-body">
                     <div class="row">
+                        <div>
+                            <a href="https://www.mixamcraft.be/">
+                                <img src="https://i.imgur.com/uFsNiEB.gif" alt="reclame" class="img-responsive center-block">
+                            </a>
+                        </div>
                         <div class="col-md-6 ">
                             <div style="border-right: 1px solid #eeeeee; padding-left: 20px; padding-right: 35px;">
                                 <form name="signin" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off" class="form-horizontal">
