@@ -139,6 +139,25 @@ if(isset($_GET['removereaction'])) {
     header("Location: staff.php?reactions=&page=$pageid&info=Reactie verwijderd");
     exit;
 }
+if(isset($_GET['removead'])) {
+    $id = $_GET['removead'];
+    ads::RemoveAd($mysqli, $id);
+
+    header("Location: staff.php?ads&info=Advertentie verwijderd");
+    exit;
+}
+if(isset($_POST['addad'])) {
+    if(!staff::canManageadvertisements($mysqli, $_SESSION['UUID'])) {
+        header("Location: staff.php?home=&warning=Geen toegang tot dit gedeelte.");
+        exit;
+    }
+    $name = $_POST['name'];
+    $code = $_POST['code'];
+    $sort = $_POST['sort'];
+    ads::addAd($mysqli, $name, $code, $sort);
+    header("Location: staff.php?ads=&info=Advertentie toegevoegd");
+    exit;
+}
 $active = 'staff';
 $keywords;
 if(isset($_GET['keywords'])) {
@@ -196,6 +215,10 @@ if(isset($_GET['keywords'])) {
                                 <h3 class="panel-title">Statistieken</h3>
                             <?php } else if(isset($_GET['applications'])) {?>
                                 <h3 class="panel-title">Vacatures</h3>
+                            <?php } else if(isset($_GET['ads'])) {?>
+                                <h3 class="panel-title">Advertenties</h3>
+                            <?php } else if(isset($_GET['addad'])) {?>
+                                <h3 class="panel-title">Advertentie toevoegen</h3>
                             <?php } else{?>
                                 <h3 class="panel-title">Home</h3>
                             <?php }?>
@@ -278,6 +301,38 @@ if(isset($_GET['keywords'])) {
                                                 article::loadAllPosts($mysqli, $pageid);
                                             }
                                         }
+                                    } else if(isset($_GET['ads']) && staff::canManageadvertisements($mysqli, $_SESSION['UUID'])) {
+                                        ?>
+                                        <a type="button" class="btn btn-info" data-toggle="modal" href="staff.php?addad">Advertentie toevoegen</a>
+                                        <?php
+                                        ads::getAllAds($mysqli);
+                                    } else if(isset($_GET['addad']) && staff::canManageadvertisements($mysqli, $_SESSION['UUID'])) {
+                                        ?>
+                                        <form name="addad" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off" class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="name"><span class="text-info">Naam</span></label>
+                                                <input type="text" name="name" id="name" placeholder="Vul hier de naam in." class="form-control" autofocus="autofocus" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="code"><span class="text-info">Code</span></label>
+                                                <textarea class="form-control" name="code" id="code"
+                                                          placeholder="Typ hier de code" value="" rows="10"
+                                                          required></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sort"><span class="text-info">Soort</span></label>
+                                                <div class="">
+                                                    <label><input type="radio" name="sort" value="0">Skycraper</label>
+                                                </div>
+                                                <div class="">
+                                                    <label><input type="radio" name="sort" value="1">Vierkant</label>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-raised btn-success" name="addad" >Toevoegen</button>
+                                            </div>
+                                        </form>
+                                        <?php
                                     } else if(isset($_GET['reviewposts']) && staff::canManagePosts($mysqli, $_SESSION['UUID'])) {
                                         if(isset($_GET['page'])) {
                                             if($_GET['page'] != 0) {
@@ -668,6 +723,9 @@ if(isset($_GET['keywords'])) {
                     <?php }
                     if(staff::canManageComments($mysqli, $_SESSION['UUID'])) {?>
                         <p><a href="?reactions=&page=1" class="shortcut"><i class="material-icons">textsms</i><span>Reacties beheren</span></a></p>
+                    <?php }
+                    if(staff::canManageadvertisements($mysqli, $_SESSION['UUID'])) {?>
+                        <p><a href="?ads" class="shortcut"><i class="material-icons">assessment</i><span>Advertenties beheren</span></a></p>
                     <?php }
                     if(staff::canSendMail($mysqli, $_SESSION['UUID'])) {?>
                         <p><a href="?mail" class="shortcut"><i class="material-icons">mail</i><span>Mail</span></a></p>

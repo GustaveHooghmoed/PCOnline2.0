@@ -4177,6 +4177,50 @@ class system {
     }
 }
 class ads {
+    static function RemoveAd($mysqli, $id) {
+        $user = $_SESSION['UUID'];
+        if(staff::canManageadvertisements($mysqli, $user)) {
+            $sql = "DELETE FROM pco_ads WHERE ID ='$id'";
+            $result = mysqli_query($mysqli, $sql);
+        }
+    }
+    static function addAd($mysqli, $name, $code, $sort) {
+        $user = $_SESSION['UUID'];
+        if(staff::canManageadvertisements($mysqli, $user)) {
+            $sql = "INSERT INTO pco_ads (ad_name, ad_code, ad_sort) VALUES ('$name', '$code', '$sort')";
+            $result = mysqli_query($mysqli, $sql);
+        }
+    }
+    static function getAllAds($mysqli) {
+        $sql="SELECT * FROM pco_ads";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        if ($count > 0) {
+            echo '
+               <table class="table table-hover">
+                   <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Soort</th>
+                            <th>Opties</th>
+                        </tr>
+                    </thead>';
+                echo '<tbody>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['ID'];
+                $name = $row['ad_name'];
+                $soort = $row['ad_sort'] == 0 ? 'Skycraper' : 'Vierkant';
+                echo '<tr>';
+                echo '<td>'.$id.'</td>';
+                echo '<td>'.$name.'</td>';
+                echo '<td>'.$soort.'</td>';
+                echo '<td><a href="staff.php?ads=&removead=' . $id . '" class="btn btn-danger btn-sm">Verwijderen</a></td>';
+                echo '</tr>';
+            }
+            echo '</table>';
+        }
+    }
     static function skycraper($mysqli, $page) {
         $page = explode(".", $page);
 
@@ -4259,6 +4303,16 @@ class staff {
     }
     static function canManageParkRequests($mysqli, $useruuid) {
         $sql = "SELECT * FROM pco_staff WHERE UUID='$useruuid' AND can_manage_parkrequests='1'";
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+        if($count > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    static function canManageadvertisements($mysqli, $useruuid) {
+        $sql = "SELECT * FROM pco_staff WHERE UUID='$useruuid' AND can_manage_advertisements='1'";
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if($count > 0) {
