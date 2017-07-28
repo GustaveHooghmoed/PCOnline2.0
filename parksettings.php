@@ -652,7 +652,7 @@ system::copyRightSign();?>
                             </div>
                         </div>
                     <?php }?>
-                    <?php ads::skycraper();?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__));?>
                 </div>
             </div>
         </div>

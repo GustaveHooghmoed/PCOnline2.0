@@ -245,7 +245,7 @@ $active = '';
                     <p class="text-muted">Het is makkelijker dan ooit om lijstjes te maken!</p>
                     <p class="text-danger">Alle javascript codes worden weg gefilterd!</p>
                     <hr>
-                    <?php ads::skycraper(); ?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__)); ?>
                 </div>
             </div>
         </div>

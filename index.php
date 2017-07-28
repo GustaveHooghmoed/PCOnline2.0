@@ -122,9 +122,9 @@ if(isset($_COOKIE["pcoemail"]) && isset($_COOKIE["pcosessionid"])) {
                 <div class="panel-body">
                     <div class="row">
                         <div>
-                            <a href="https://www.mixamcraft.be/">
-                                <img src="https://i.imgur.com/uFsNiEB.gif" alt="reclame" class="img-responsive center-block">
-                            </a>
+                            <?php
+                                ads::vierkant($mysqli, basename(__FILE__));
+                            ?>
                         </div>
                         <div class="col-md-6 ">
                             <div style="border-right: 1px solid #eeeeee; padding-left: 20px; padding-right: 35px;">

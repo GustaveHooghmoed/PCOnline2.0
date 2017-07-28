@@ -74,7 +74,7 @@ $active = 'plugins';
 
                 <div class="col-md-3 right-container well">
                     <!-- col-3 !-->
-                    <?php ads::skycraper();?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__));?>
                 </div>
             </div>
         </div>

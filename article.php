@@ -220,7 +220,7 @@ statistics::articleVisit($mysqli, $_SESSION['UUID'], $id);
                 </div>
 
                 <div class="col-md-3 right-container well">
-                    <?php ads::skycraper(); ?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__)); ?>
                 </div>
             </div>
         </div>

@@ -261,7 +261,7 @@ system::copyRightSign();?>
                     <p><a href="?profile" class="shortcut"><i class="material-icons">accessibility</i><span>Profiel instellingen</span></a></p>
                     <p><a href="?password" class="shortcut"><i class="material-icons">keyboard</i><span>Wachtwoord</span></a></p>
                     <p><a href="?followed" class="shortcut"><i class="material-icons">keyboard_arrow_right</i><span>Volgend</span></a></p>
-                    <?php ads::skycraper();?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__));?>
                 </div>
             </div>
         </div>

@@ -94,7 +94,7 @@ if(isset($_REQUEST['unlike'])) {
                                 <div class="col-md-12">
                                     <?php
                                         parkcraft::loadTutorial($mysqli, $id);
-                                        ads::vierkant();
+                                        ads::vierkant($mysqli, basename(__FILE__));
                                     ?>
                                 </div>
                             </div>

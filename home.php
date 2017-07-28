@@ -67,7 +67,7 @@ $active = 'home';
                 <div class="col-md-3 right-container well">
                     <h4 class="text-danger">Wie te volgen</h4>
                     <?php park::loadWhoToFollow($mysqli,$_SESSION['UUID']);?>
-                    <?php ads::skycraper();?></div>
+                    <?php ads::skycraper($mysqli, basename(__FILE__));?></div>
             </div>
         </div>
     </div>

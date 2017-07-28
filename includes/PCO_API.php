@@ -4177,28 +4177,73 @@ class system {
     }
 }
 class ads {
-    static function skycraper() {
-        echo '<span class="text-muted">Advertentie</span><br /><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- ParkCraft Skyscraper -->
-                    <ins class="adsbygoogle"
-                         style="display:inline-block;width:250px;height:600px"
-                         data-ad-client="ca-pub-3044188577438541"
-                         data-ad-slot="1213730515"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>';
+    static function skycraper($mysqli, $page) {
+        $page = explode(".", $page);
+
+        $randomrow = array(
+            "ID",
+            "ad_code",
+            "ad_pages"
+        );
+        $randomorder = array(
+            "asc",
+            "desc"
+        );
+        $ranrow = $randomrow[array_rand($randomrow,1)];
+        $ranorder = $randomorder[array_rand($randomorder,1)];
+
+
+        $sql = "SELECT * FROM pco_ads WHERE ad_pages='$page[0]' AND ad_sort='0' order by ".$ranrow." ".$ranorder;
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+
+        $row = mysqli_fetch_assoc($result);
+
+        if($count != 0) {
+            echo $row['ad_code'];
+        } else {
+
+            $sql = "SELECT * FROM pco_ads WHERE ad_pages='*' AND ad_sort='0' order by ".$ranrow." ".$ranorder;
+            $result = mysqli_query($mysqli, $sql);
+            $count = mysqli_num_rows($result);
+
+            $row = mysqli_fetch_assoc($result);
+            echo $row['ad_code'];
+        }
     }
-    static function vierkant() {
-        echo '<span class="text-muted">Advertentie</span><br /><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- ParkCraft vierknt -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3044188577438541"
-             data-ad-slot="2271661314"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+    static function vierkant($mysqli, $page) {
+        $page = explode(".", $page);
+
+        $randomrow = array(
+            "ID",
+            "ad_code",
+            "ad_pages"
+        );
+        $randomorder = array(
+            "asc",
+            "desc"
+        );
+        $ranrow = $randomrow[array_rand($randomrow,1)];
+        $ranorder = $randomorder[array_rand($randomorder,1)];
+
+
+        $sql = "SELECT * FROM pco_ads WHERE ad_pages='$page[0]' AND ad_sort='1' order by ".$ranrow." ".$ranorder;
+        $result = mysqli_query($mysqli, $sql);
+        $count = mysqli_num_rows($result);
+
+        $row = mysqli_fetch_assoc($result);
+
+        if($count != 0) {
+            echo $row['ad_code'];
+        } else {
+
+            $sql = "SELECT * FROM pco_ads WHERE ad_pages='*' AND ad_sort='1' order by ".$ranrow." ".$ranorder;
+            $result = mysqli_query($mysqli, $sql);
+            $count = mysqli_num_rows($result);
+
+            $row = mysqli_fetch_assoc($result);
+            echo $row['ad_code'];
+        }
     }
 }
 class staff {

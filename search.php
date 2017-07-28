@@ -79,7 +79,7 @@ $keywords = mysqli_real_escape_string($mysqli, $keywords);
                 <div class="col-md-3 right-container well">
                     <h4 class="text-danger">Wie te volgen</h4>
                     <?php park::loadWhoToFollow($mysqli,$_SESSION['UUID']);?>
-                    <?php ads::skycraper();?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__));?>
                 </div>
             </div>
         </div>

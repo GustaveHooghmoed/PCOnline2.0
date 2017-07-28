@@ -115,7 +115,7 @@ $active = 'help';
                     <p><a href="?plugin" class="shortcut"><i class="material-icons">airline_seat_recline_normal</i><span>Plugin</span></a></p>
                     <p><a href="?" class="shortcut"><i class="material-icons">help</i><span>Help</span></a></p>
                    <!-- col-3 !-->
-                    <?php ads::skycraper();?>
+                    <?php ads::skycraper($mysqli, basename(__FILE__));?>
                 </div>
                 </div>
             </div>
