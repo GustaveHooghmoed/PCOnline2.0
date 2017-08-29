@@ -7,6 +7,7 @@
  */
 ob_start();
 session_start();
+require 'includes/language.php';
 include 'includes/connectdb.php';
 include 'includes/PCO_API.php';
 include 'includes/CHAT_API.php';

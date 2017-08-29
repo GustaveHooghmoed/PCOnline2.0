@@ -76,7 +76,7 @@ class feed {
                             <span class="shortcut"><i class="material-icons heart"><a href="article.php?id='.$postid.'&'.$like.'" style="text-decoration: none;">'.$icon.'</a></i><span><a href="article.php?id='.$postid.'&likes" style="color: #000000; text-decoration: none;">'.article::countLikes($mysqli, $postid).'</a>
                             <span class="shortcut"><i class="material-icons">mode_comment</i><span>'.article::getReactionCount($mysqli, $postid).'</span></span>
                             <span class="shortcut"><i class="material-icons">remove_red_eye</i><span>'.statistics::getCountsArticles($mysqli, $postid).'</span></span>
-                            <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
+                            <i style="float: right;">'.language::getString($mysqli, 'FEED_POSTED').$row["posted_on"].'</i>
                         </div>
                         <hr />
 
@@ -132,7 +132,7 @@ class feed {
                             <span class="shortcut"><i class="material-icons heart"><a href="article.php?id='.$postid.'&'.$like.'" style="text-decoration: none;">'.$icon.'</a></i><span><a href="article.php?id='.$postid.'&likes" style="color: #000000; text-decoration: none;">'.article::countLikes($mysqli, $postid).'</a>
                             <span class="shortcut"><i class="material-icons">mode_comment</i><span>'.article::getReactionCount($mysqli, $postid).'</span></span>
                             <span class="shortcut"><i class="material-icons">remove_red_eye</i><span>'.statistics::getCountsArticles($mysqli, $postid).'</span></span>
-                            <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
+                            <i style="float: right;">'.language::getString($mysqli, 'FEED_POSTED').$row["posted_on"].'</i>
                         </div>
                         <hr />
 

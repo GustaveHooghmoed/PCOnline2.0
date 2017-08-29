@@ -15,11 +15,11 @@ class chats {
                 if(chats::checkIfChatHasNewMessages($mysqli, $row['ID'], $user)) {
                     if (strcmp($row['user1'], $user) == 0) {
                         echo '<div class="hover" onclick="openChat(' . $row['ID'] . ')"><img onclick="openUserPage(' . user::getIDFromUUID($mysqli, $row['user2']) . ')" class="avatar pull-left hover" src="' . userpage::getProfilePicture($mysqli, user::getIDFromUUID($mysqli, $row['user2'])) . '" alt="" style="display: block; margin: 0 auto; margin-right:5px;"/>
-                        <span><strong>' . user::getNameByUUID($mysqli, $row['user2']) . '</strong></span><br /><span class="text-muted">' . chats::getLastMessage($mysqli, $row['ID']) . '</span><strong><span class="pull-right text-success">Nieuw bericht!</span></strong>
+                        <span><strong>' . user::getNameByUUID($mysqli, $row['user2']) . '</strong></span><br /><span class="text-muted">' . chats::getLastMessage($mysqli, $row['ID']) . '</span><strong><span class="pull-right text-success">'.language::getString($mysqli, 'CHATS_NEW_MESSAGE').'</span></strong>
                         </div><hr />';
                     } else if (strcmp($row['user2'], $user) == 0) {
                         echo '<div class="hover" onclick="openChat(' . $row['ID'] . ')"><img onclick="openUserPage(' . user::getIDFromUUID($mysqli, $row['user1']) . ')" class="avatar pull-left hover" src="' . userpage::getProfilePicture($mysqli, user::getIDFromUUID($mysqli, $row['user1'])) . '" alt="" style="display: block; margin: 0 auto; margin-right:5px;"/>
-                        <span><strong>' . user::getNameByUUID($mysqli, $row['user1']) . '</strong></span><br /><span class="text-muted">' . chats::getLastMessage($mysqli, $row['ID']) . '</span><strong><span class="pull-right text-success">Nieuw bericht!</span></strong>
+                        <span><strong>' . user::getNameByUUID($mysqli, $row['user1']) . '</strong></span><br /><span class="text-muted">' . chats::getLastMessage($mysqli, $row['ID']) . '</span><strong><span class="pull-right text-success">'.language::getString($mysqli, 'CHATS_NEW_MESSAGE').'</span></strong>
                         </div><hr />';
                     }
                 } else {
@@ -35,13 +35,13 @@ class chats {
                 }
             }
         } else {
-            echo 'Nog geen chats verstuurd of ontvangen!';
+            echo language::getString($mysqli, 'CHATS_NO_CHATS_SENDER_OR_RECEIVED');
         }
     }
     static function getLastMessage($mysqli, $chatid) {
         if(!chats::isChatOfUser($mysqli, $chatid, $_SESSION['UUID'])) {
-            echo 'error';
-            return;
+            echo language::getString($mysqli, 'ERROR');
+            exit;
         }
         $sql="SELECT * FROM pco_chats_messages WHERE chat_id='$chatid' ORDER BY ID DESC";
         $result = mysqli_query($mysqli, $sql);
@@ -54,33 +54,35 @@ class chats {
             }
             return user::getNameByUUID($mysqli, $row['sender']).": ".substr(common::makeUrls($row['message']), 0, 50).$string;
         } else {
-            return 'Nog geen berichten verstuurd.';
+            return language::getString($mysqli, 'CHATS_NO_MESSAGES_SENDED');
         }
     }
     static function loadChat($mysqli, $chatid) {
         if(!chats::isChatOfUser($mysqli, $chatid, $_SESSION['UUID'])) {
-            echo 'error';
-            return;
-        }
-        $sql="SELECT * FROM pco_chats_messages WHERE chat_id='$chatid' ORDER BY ID ASC LIMIT 50";
-        $result = mysqli_query($mysqli, $sql);
-        $count = mysqli_num_rows($result);
-        if($count > 0) {
-            echo '<input type="hidden" id="id" value="'.$chatid.'"/>';
-            while($row = mysqli_fetch_assoc($result)) {
-                echo '<div>
-                        <img class="avatar pull-left hover" src="' . userpage::getProfilePicture($mysqli, user::getIDFromUUID($mysqli, $row['sender'])) . '" alt="" style="display: block; margin: 0 auto; margin-right:5px;"/>
-                        <span><strong>' . user::getNameByUUID($mysqli, $row['sender']) . '</strong></span><br />
-                        <span class="">'.common::makeUrls($row['message']).'</span><br /><span class="text-muted">'.$row['sended'].'</span>
-                </div><hr />';
-            }
+            echo language::getString($mysqli, 'ERROR');
+            exit;
         } else {
-            echo '<input type="hidden" id="id" value="'.$chatid.'"/>';
+            $sql = "SELECT * FROM pco_chats_messages WHERE chat_id='$chatid' ORDER BY ID ASC LIMIT 50";
+            $result = mysqli_query($mysqli, $sql);
+            $count = mysqli_num_rows($result);
+            if ($count > 0) {
+                echo '<input type="hidden" id="id" value="' . $chatid . '"/>';
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<div>
+                            <img class="avatar pull-left hover" src="' . userpage::getProfilePicture($mysqli, user::getIDFromUUID($mysqli, $row['sender'])) . '" alt="" style="display: block; margin: 0 auto; margin-right:5px;"/>
+                            <span><strong>' . user::getNameByUUID($mysqli, $row['sender']) . '</strong></span><br />
+                            <span class="">' . common::makeUrls($row['message']) . '</span><br /><span class="text-muted">' . $row['sended'] . '</span>
+                    </div><hr />';
+                }
+            } else {
+                echo '<input type="hidden" id="id" value="' . $chatid . '"/>';
+            }
         }
     }
     static function loadChatReload($mysqli, $chatid) {
         if(!chats::isChatOfUser($mysqli, $chatid, $_SESSION['UUID'])) {
-            echo 'error';
+            echo language::getString($mysqli, 'ERROR');
+            exit;
         }
         $sql1="UPDATE pco_chats_messages SET readed='1' WHERE chat_id='$chatid' AND readed='0' AND sender NOT IN ('".$_SESSION['UUID']."') ORDER BY ID ASC LIMIT 50";
         $result1 = mysqli_query($mysqli, $sql1);
@@ -104,7 +106,8 @@ class chats {
     }
     static function sendMessage($mysqli, $chatid, $message) {
         if(!chats::isChatOfUser($mysqli, $chatid, $_SESSION['UUID'])) {
-            return;
+            echo language::getString($mysqli, 'ERROR');
+            exit;
         }
         if(strcmp($message, '') == 0) {
             return;
@@ -115,8 +118,8 @@ class chats {
         $result = mysqli_query($mysqli, $sql);
     }
     static function getNameOfChatter($mysqli, $chatid) {
-        if(!chats::isChatOfUser($mysqli, $chatid, $_SESSION['UUID']) || staff::canManageChats()) {
-            return 'error';
+        if(!chats::isChatOfUser($mysqli, $chatid, $_SESSION['UUID']) || staff::canManageChats($mysqli, $_SESSION['UUID'])) {
+            return language::getString($mysqli, 'ERROR');
         }
         $sql="SELECT * FROM pco_chats WHERE ID='$chatid'";
         $result = mysqli_query($mysqli, $sql);
@@ -129,7 +132,7 @@ class chats {
             if(strcmp($row['user2'], $_SESSION['UUID']) == 0) {
                 return user::getNameByUUID($mysqli, $row['user1']);
             }
-            return 'error';
+            return language::getString($mysqli, 'ERROR');
         }
     }
     static function isChatOfUser($mysqli, $chatid, $userid) {
@@ -214,7 +217,7 @@ class chats {
             ';
         }
         if($count == 0) {
-            echo '<p><strong>Geen overeenkomende gebruikers</strong></p>';
+            echo '<p><strong>'.language::getString($mysqli, 'CHATS_NO_MATCHING_USERS').'</strong></p>';
         }
     }
 }

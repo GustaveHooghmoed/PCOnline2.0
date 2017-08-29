@@ -7,9 +7,7 @@
  */
 ob_start();
 session_start();
-include 'includes/connectdb.php';
-include 'includes/PCO_API.php';
-include 'includes/CHAT_API.php';
+require 'includes/phpimports.php';
 if(!$cvwl) {
     if (!isset($_SESSION['user'])) {
         header("Location: index.php?redirect=".urlencode($_SERVER['REQUEST_URI']));

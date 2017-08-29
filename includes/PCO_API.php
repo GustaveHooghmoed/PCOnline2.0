@@ -16,7 +16,7 @@ class user {
             $row = mysqli_fetch_assoc($result);
             if($count > 0) {
                 if(!user::hasAccess($mysqli, $row['UUID'])) {
-                    header("Location: index.php?warning=Je hebt geen toegang tot ParkCraft Online.");
+                    header("Location: index.php?warning=".language::getString($mysqli, 'NO_ACCESS'));
                     exit;
                 }
                 session_start();
@@ -58,7 +58,7 @@ class user {
             $row = mysqli_fetch_assoc($result);
             if($count > 0) {
                 if(!user::hasAccess($mysqli, $row['UUID'])) {
-                    header("Location: index.php?warning=Je hebt geen toegang tot ParkCraft Online.");
+                    header("Location: index.php?warning=".language::getString($mysqli, 'NO_ACCESS'));
                     exit;
                 }
                 session_start();
@@ -1360,9 +1360,9 @@ class user {
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Logo</th>
-                            <th>Naam</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'FOLLOWED_LOGO').'</th>
+                            <th>'.language::getString($mysqli, 'FOLLOWED_NAME').'</th>
+                            <th>'.language::getString($mysqli, 'FOLLOWED_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -1377,14 +1377,14 @@ class user {
                     echo '<tr>';
                     echo '<td><img src="' . $logo . '" alt="" class="avatar"/></td>';
                     echo '<td><a href="park.php?id=' . $parkid . '" class="">'.$name.'</a></td>';
-                    echo '<td><a href="park.php?id=' . $parkid . '&unfollow=&bts=" class="btn btn-danger btn-sm">Ontvolgen</a></td>';
+                    echo '<td><a href="park.php?id=' . $parkid . '&unfollow=&bts=" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'FOLLOWED_UNFOLLOW').'</a></td>';
                     echo '</tr>';
                 }
             }
             echo '</tbody>';
             echo '</table>';
         } else {
-            echo '<p>Je volgt geen parken.</p>';
+            echo '<p>'.language::getString($mysqli, 'FOLLOWED_NOFOLLOWING').'</p>';
         }
     }
     static function loadAllUsers($mysqli, $pageid) {
@@ -1397,13 +1397,13 @@ class user {
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Naam</th>
-                            <th>Email</th>
-                            <th>Rank</th>
-                            <th>Toegang</th>
-                            <th>Geactiveerd</th>
-                            <th>Laatst Online</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'USER_NAME').'</th>
+                            <th>'.language::getString($mysqli, 'USER_EMAIL').'</th>
+                            <th>'.language::getString($mysqli, 'USER_RANK').'</th>
+                            <th>'.language::getString($mysqli, 'USER_ACCESS').'</th>
+                            <th>'.language::getString($mysqli, 'USER_ACTIVATED').'</th>
+                            <th>'.language::getString($mysqli, 'USER_LASTONLINE').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -1417,14 +1417,14 @@ class user {
                 $activated = $row['activated'];
                 $lastonline = $row['last_execution'];
                 if($activated == 1) {
-                    $activated = 'Ja';
+                    $activated = language::getString($mysqli, 'YES');
                 } else {
-                    $activated = 'Nee';
+                    $activated = language::getString($mysqli, 'NO');
                 }
                 if($access == 1) {
-                    $access = 'Ja';
+                    $access = language::getString($mysqli, 'YES');
                 } else {
-                    $access = 'Nee';
+                    $access = language::getString($mysqli, 'NO');
                 }
                 echo '<tr>';
                 echo '<td><a href="user.php?id='.$id.'">'.$name.'</a></td>';
@@ -1433,7 +1433,7 @@ class user {
                 echo '<td>'.$access.'</td>';
                 echo '<td>'.$activated.'</td>';
                 echo '<td>'.$lastonline.'</td>';
-                echo '<td><a href="staff.php?users=&id=' . $uuid . '&pi=' . ($pageid + 1) . '" class="btn btn-danger btn-sm">Bekijken</a></td>';
+                echo '<td><a href="staff.php?users=&id=' . $uuid . '&pi=' . ($pageid + 1) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'SEE').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -1443,19 +1443,19 @@ class user {
             $count1 = mysqli_num_rows($result1);
             if($count1 > ($pageid+1)*50) {
                 if($pageid > 0) {
-                    echo '<a href="staff.php?users=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?users=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                 }
-                echo '<a href="staff.php?users=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                echo '<a href="staff.php?users=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
             } else {
                 if ($pageid > 0) {
-                    echo '<a href="staff.php?users=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?users=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                     if ($count1 > ($pageid + 1) * 50) {
-                        echo '<a href="staff.php?users=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                        echo '<a href="staff.php?users=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
                     }
                 }
             }
         } else {
-            echo '<p>Geen gebruikers gevonden op deze pagina.</p>';
+            echo '<p>'.language::getString($mysqli, 'NO_USERS_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function loadAllUsersSearch($mysqli, $keyword) {
@@ -1464,20 +1464,20 @@ class user {
         $count = mysqli_num_rows($result);
         if ($count > 0) {
             if($count > 50) {
-                echo '<p>Geef een specefiekere zoekopdracht!</p>';
+                echo '<p>'.language::getString($mysqli, 'SPECIFIC_SEARCH').'</p>';
                 exit;
             }
             echo '
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Naam</th>
-                            <th>Email</th>
-                            <th>Rank</th>
-                            <th>Toegang</th>
-                            <th>Geactiveerd</th>
-                            <th>Laatst Online</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'USER_NAME').'</th>
+                            <th>'.language::getString($mysqli, 'USER_EMAIL').'</th>
+                            <th>'.language::getString($mysqli, 'USER_RANK').'</th>
+                            <th>'.language::getString($mysqli, 'USER_ACCESS').'</th>
+                            <th>'.language::getString($mysqli, 'USER_ACTIVATED').'</th>
+                            <th>'.language::getString($mysqli, 'USER_LASTONLINE').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -1491,14 +1491,14 @@ class user {
                 $activated = $row['activated'];
                 $lastonline = $row['last_execution'];
                 if($activated == 1) {
-                    $activated = 'Ja';
+                    $activated = language::getString($mysqli, 'YES');
                 } else {
-                    $activated = 'Nee';
+                    $activated = language::getString($mysqli, 'NO');
                 }
                 if($access == 1) {
-                    $access = 'Ja';
+                    $access = language::getString($mysqli, 'YES');
                 } else {
-                    $access = 'Nee';
+                    $access = language::getString($mysqli, 'NO');
                 }
                 echo '<tr>';
                 echo '<td><a href="user.php?id='.$id.'">'.$name.'</a></td>';
@@ -1507,13 +1507,13 @@ class user {
                 echo '<td>'.$access.'</td>';
                 echo '<td>'.$activated.'</td>';
                 echo '<td>'.$lastonline.'</td>';
-                echo '<td><a href="staff.php?users=&id=' . $uuid . '&pi=1" class="btn btn-danger btn-sm">Bekijken</a></td>';
+                echo '<td><a href="staff.php?users=&id=' . $uuid . '&pi=1" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'SEE').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
             echo '</table>';
         } else {
-            echo '<p>Geen gebruikers gevonden op deze pagina.</p>';
+            echo '<p>'.language::getString($mysqli, 'NO_USERS_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function loadUserIn($mysqli, $uuid) {
@@ -1529,7 +1529,7 @@ class user {
             $file = htmlspecialchars($_SERVER["PHP_SELF"]);
             echo '                    <form name="edituser" id="edituser" action="'.$file.'" enctype="multipart/form-data" method="post" autocomplete="off" class="form-horizontal">';
             echo '                              <div class="form-group">
-                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">Naam</span></label>
+                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">'.language::getString($mysqli, 'USER_NAME').'</span></label>
                                                     <div class="col-md-10" id="naamdiv">
                                                         <input type="text" class="form-control" value="'.$row["name"].'" name="name" id="name"/>
                                                         <input type="hidden" class="form-control" value="'.$_GET['pi'].'" name="pi" id="pi"/>
@@ -1537,13 +1537,13 @@ class user {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">Email</span></label>
+                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">'.language::getString($mysqli, 'USER_EMAIL').'</span></label>
                                                     <div class="col-md-10" id="naamdiv">
                                                         <input type="email" class="form-control" value="'.$row["email"].'" name="email" id="email"/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">Account geactiveerd</span></label>
+                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">'.language::getString($mysqli, 'USER_ACTIVATED').'</span></label>
                                                     <div class="col-md-10" id="naamdiv">
                                                         <select name="ag" class="form-control">
                                                             <option value="1" '; if($row["activated"] == 1) { echo "selected"; } echo '>Ja</option>
@@ -1552,7 +1552,7 @@ class user {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">Toegang tot ParkCraft Online</span></label>
+                                                    <label for="title" class="col-md-2 control-label"><span class="text-info">'.language::getString($mysqli, 'USER_ACCESS').'</span></label>
                                                     <div class="col-md-10" id="naamdiv">
                                                         <select name="ttpo" class="form-control">
                                                             <option value="1" '; if($row["access"] == 1) { echo "selected"; } echo '>Ja</option>
@@ -1564,36 +1564,36 @@ class user {
                                                     <label for="title" class="col-md-2 control-label"><span class="text-info">Rank</span></label>
                                                     <div class="col-md-10" id="naamdiv">
                                                         <select name="rank" class="form-control">
-                                                            <option value="7" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 7) { echo "selected"; } echo '>Senior Developer</option>
-                                                            <option value="6" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 6) { echo "selected"; } echo '>Beta-Tester</option>
-                                                            <option value="5" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 5) { echo "selected"; } echo '>Auteur</option>
-                                                            <option value="4" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 4) { echo "selected"; } echo '>Junior Developer</option>
-                                                            <option value="3" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 3) { echo "selected"; } echo '>Beheerder</option>
-                                                            <option value="2" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 2) { echo "selected"; } echo '>Video creator</option>
-                                                            <option value="1" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 1) { echo "selected"; } echo '>Moderator</option>
-                                                            <option value="0" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 0) { echo "selected"; } echo '>Gebruiker</option>
+                                                            <option value="7" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 7) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_SENIORDEVELOPER').'</option>
+                                                            <option value="6" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 6) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_BETATESTER').'</option>
+                                                            <option value="5" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 5) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_AUTHOR').'</option>
+                                                            <option value="4" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 4) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_JUNIORDEVELOPER').'</option>
+                                                            <option value="3" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 3) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_OWNER').'</option>
+                                                            <option value="2" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 2) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_VIDEOCREATOR').'</option>
+                                                            <option value="1" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 1) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_MODERATOR').'</option>
+                                                            <option value="0" '; if(user::getRankByUUID($mysqli, $row["UUID"]) == 0) { echo "selected"; } echo '>'.language::getString($mysqli, 'ROLE_USER').'</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <p class="col-md-2 control-label">Laatste online:</p>
+                                                    <p class="col-md-2 control-label">'.language::getString($mysqli, 'USER_LASTONLINE').'</p>
                                                     <p class="form-control">'.$row["last_execution"].'</p>
                                                 </div>
                                                 <div class="form-group">
-                                                    <p class="col-md-2 control-label">IP:</p>
+                                                    <p class="col-md-2 control-label">'.language::getString($mysqli, 'IP').':</p>
                                                     <p class="form-control">'.(user::getRank($mysqli) == 7 ? (empty(!$row["ip"]) ? $row["ip"].' / '.$city : 'n.v.t.') : 'n.v.t.').'</p>
                                                 </div>
                                                 <div class="text-center"">
-                                                    <button type="submit" class="btn btn-raised btn-success" name="edituserbutton" id="edituserbutton">Opslaan
+                                                    <button type="submit" class="btn btn-raised btn-success" name="edituserbutton" id="edituserbutton">'.language::getString($mysqli, 'SAVE').'
                                                     </button>
-                                                    <p class="form-control">'.(user::getRank($mysqli) == 7 ? '<a href="staff.php?remote='.$row["UUID"].'" class="btn btn-raised btn-warning">Overnemen</a>' : '').'</p>
+                                                    <p class="form-control">'.(user::getRank($mysqli) == 7 ? '<a href="staff.php?remote='.$row["UUID"].'" class="btn btn-raised btn-warning">'.language::getString($mysqli, 'REMOTE').'</a>' : '').'</p>
                                                 </div>
                                 </form>';
         }
     }
     static function sendEmailToEveryone($mysqli, $subject, $body) {
         if(!user::getRank($mysqli) > 2) {
-            header("Location: staff.php?warning=Geen toegang tot dit gedeelte.");
+            header("Location: staff.php?warning=".language::getString($mysqli, 'NO_ACCESS_TO_THIS_SECTION'));
             exit;
         }
         $sql="SELECT * FROM pco_users";
@@ -2110,7 +2110,7 @@ class article {
         $result = mysqli_query($mysqli, $sql);
         $count = mysqli_num_rows($result);
         if($count == 0) {
-            echo '<p>Dit park heeft nog geen artikelen gepost.</p>';
+            echo '<p>'.language::getString($mysqli, 'PARK_NO_POSTS').'</p>';
         }
         while($row = mysqli_fetch_assoc($result)) {
             $postid = $row['ID'];
@@ -2121,7 +2121,7 @@ class article {
                 }
             } else {
                 if(article::statusArticle($mysqli, $postid) == 0 || article::statusArticle($mysqli, $postid) == 2) {
-                    $title = '<span class="label label-info">Wacht op bevestiging</span> ' . $title;
+                    $title = '<span class="label label-info">'.language::getString($mysqli, 'POST_WAIT_FOR_CONFIRMATION').'</span> ' . $title;
                 }
             }
 
@@ -2166,7 +2166,7 @@ class article {
                             <span class="shortcut"><i class="material-icons heart"><a href="article.php?id='.$postid.'&'.$like.'" style="text-decoration: none;">'.$icon.'</a></i><span><a href="article.php?id='.$postid.'&likes" style="color: #000000; text-decoration: none;">'.article::countLikes($mysqli, $postid).'</a>
                             <span class="shortcut"><i class="material-icons">mode_comment</i><span>'.article::getReactionCount($mysqli, $postid).'</span></span>
                             <span class="shortcut"><i class="material-icons">remove_red_eye</i><span>'.statistics::getCountsArticles($mysqli, $postid).'</span></span>
-                            <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
+                            <i style="float: right;">'.language::getString($mysqli, 'FEED_POSTED').$row["posted_on"].'</i>
                         </div>
                         <hr />
 
@@ -2223,7 +2223,7 @@ class article {
                             <span class="shortcut"><i class="material-icons heart"><a href="article.php?id='.$postid.'&'.$like.'" style="text-decoration: none;">'.$icon.'</a></i><span><a href="article.php?id='.$postid.'&likes" style="color: #000000; text-decoration: none;">'.article::countLikes($mysqli, $postid).'</a>
                             <span class="shortcut"><i class="material-icons">mode_comment</i><span>'.article::getReactionCount($mysqli, $postid).'</span></span>
                             <span class="shortcut"><i class="material-icons">remove_red_eye</i><span>'.statistics::getCountsArticles($mysqli, $postid).'</span></span>
-                            <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
+                            <i style="float: right;">'.language::getString($mysqli, 'FEED_POSTED').$row["posted_on"].'</i>
                         </div>
                         <hr />
 
@@ -2276,7 +2276,7 @@ class article {
                             <span class="shortcut"><i class="material-icons heart"><a href="article.php?id='.$postid.'&'.$like.'" style="text-decoration: none;">'.$icon.'</a></i><span><a href="article.php?id='.$postid.'&likes" style="color: #000000; text-decoration: none;">'.article::countLikes($mysqli, $postid).'</a>
                             <span class="shortcut"><i class="material-icons">mode_comment</i><span>'.article::getReactionCount($mysqli, $postid).'</span></span>
                             <span class="shortcut"><i class="material-icons">remove_red_eye</i><span>'.statistics::getCountsArticles($mysqli, $postid).'</span></span>
-                            <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
+                            <i style="float: right;">'.language::getString($mysqli, 'FEED_POSTED').$row["posted_on"].'</i>
                         </div>
                         <hr />
 
@@ -2326,9 +2326,9 @@ class article {
         if($count == 0 && strpos($postimages, ',') !== true) {
             echo '<img src="' . str_replace(',', '', $imgs[0]) . '" alt="' .$title. '" class="img-responsive center-block hover" id="headImg" style="max-height: 300px;">
 	          <!-- The Modal -->
-                     <div id="headModal" class="modal">
-  			<span class="close">&times;</span>
- 			<img class="modal-content" id="img01">
+                     <div id="headModal" class="modal-pc">
+  			<span class="close-pc">&times;</span>
+ 			<img class="modal-content-pc" id="img01">
  			<div id="caption"></div>
                      </div>
 		    
@@ -2347,7 +2347,7 @@ class article {
                       }
 
                    // Get the <span> element that closes the modal
-                      var span = document.getElementsByClassName("close")[0];
+                      var span = document.getElementsByClassName("close-pc")[0];
 
                    // When the user clicks on <span> (x), close the modal
                       span.onclick = function() { 
@@ -2357,9 +2357,9 @@ class article {
         } else {
             echo '<img src="' . str_replace(',', '', $postimages) . '" alt="' .$title. '" class="img-responsive center-block hover" id="headImg" style="max-height: 300px;">
 	          <!-- The Modal -->
-                     <div id="headModal" class="modal">
-  			<span class="close">&times;</span>
- 			<img class="modal-content" id="img01">
+                     <div id="headModal" class="modal-pc">
+  			<span class="close-pc">&times;</span>
+ 			<img class="modal-content-pc" id="img01">
  			<div id="caption"></div>
                      </div>
 		    
@@ -2378,7 +2378,7 @@ class article {
                       }
 
                    // Get the <span> element that closes the modal
-                      var span = document.getElementsByClassName("close")[0];
+                      var span = document.getElementsByClassName("close-pc")[0];
 
                    // When the user clicks on <span> (x), close the modal
                       span.onclick = function() { 
@@ -2390,7 +2390,7 @@ class article {
                 <h3>'.$title.'</h3>
                 <span>'.$body.'</span>
                 <hr />
-                <i style="float: right;">Geplaatst op: '.$row["posted_on"].'</i>
+                <i style="float: right;">'.language::getString($mysqli, 'FEED_POSTED').$row["posted_on"].'</i>
                 <span style="float: left;" class="shortcut"><i class="material-icons heart"><a href="?id='.$id.'&'.$like.'" style="text-decoration: none">'.$icon.'</a></i><span><a href="?id='.$id.'&likes" style="color: #000000; text-decoration: none;">'.article::countLikes($mysqli, $id).'</a></span></span>
                 <span class="shortcut"><i class="material-icons">remove_red_eye</i><span>'.statistics::getCountsArticles($mysqli, $id).'</span></span><br /><br />
                 <ul class="share-buttons">
@@ -2459,10 +2459,10 @@ class article {
                 echo '
                 <img onclick="openUserPage('.user::getIDFromUUID($mysqli, $row['uuid']).')" class="avatar pull-left hover" src="'.userpage::getProfilePicture($mysqli, user::getIDFromUUID($mysqli, $row['uuid'])).'" alt="" style="display: block; margin: 0 auto; margin-right:5px;"/>
                 <span class="label ' . user::getLabel($mysqli, user::getRankByUUID($mysqli, $row['uuid'])) . '">' . user::getPrefix($mysqli, user::getRankByUUID($mysqli, $row['uuid'])) . '</span>
-                <span class="label label-primary">Eigenaar</span><span> <strong><a href="user.php?id='.user::getIDFromUUID($mysqli, $row["uuid"]).'" style="text-decoration: none; color: black;">' . user::getNameByUUID($mysqli, $row['uuid']) . '</a></strong></span>
+                <span class="label label-primary">'.language::getString($mysqli, 'PARK_OWNER').'</span><span> <strong><a href="user.php?id='.user::getIDFromUUID($mysqli, $row["uuid"]).'" style="text-decoration: none; color: black;">' . user::getNameByUUID($mysqli, $row['uuid']) . '</a></strong></span>
                 <p>' . $row['reaction'] . '</p>';
                 if ($row['uuid'] == $_SESSION['UUID'] || staff::canManageComments($mysqli, $_SESSION['UUID'])) {
-                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">Verwijder</a>';
+                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">'.language::getString($mysqli, 'REMOVE').'</a>';
                 }
                 echo '<hr />';
             } else if(park::IsUserStaff($mysqli, article::getParkID($mysqli, $id), $row['uuid'])) {
@@ -2472,7 +2472,7 @@ class article {
                 <span class="label label-primary">' . park::getStaffPrefix($mysqli, article::getParkID($mysqli, $id), $row['uuid']) . '</span><span> <strong><a href="user.php?id='.user::getIDFromUUID($mysqli, $row["uuid"]).'" style="text-decoration: none; color: black;">' . user::getNameByUUID($mysqli, $row['uuid']) . '</a></strong></span>
                 <p>' . $row['reaction'] . '</p>';
                 if ($row['uuid'] == $_SESSION['UUID'] || staff::canManageComments($mysqli, $_SESSION['UUID'])) {
-                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">Verwijder</a>';
+                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">'.language::getString($mysqli, 'REMOVE').'</a>';
                 }
                 echo '<hr />';
             } else {
@@ -2481,13 +2481,13 @@ class article {
                 <span class="label ' . user::getLabel($mysqli, user::getRankByUUID($mysqli, $row['uuid'])) . '">' . user::getPrefix($mysqli, user::getRankByUUID($mysqli, $row['uuid'])) . '</span><span> <strong><a href="user.php?id='.user::getIDFromUUID($mysqli, $row["uuid"]).'" style="text-decoration: none; color: black;">' . user::getNameByUUID($mysqli, $row['uuid']) . '</a></strong></span>
                 <p>' . $row['reaction'] . '</p>';
                 if ($row['uuid'] == $_SESSION['UUID'] || staff::canManageComments($mysqli, $_SESSION['UUID'])) {
-                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">Verwijder</a>';
+                    echo '<a href="?remove=' . $rowid . '&id=' . $id . '">'.language::getString($mysqli, 'REMOVE').'</a>';
                 }
                 echo '<hr />';
             }
         }
         echo '<script>function openUserPage(user) {
-                 window.open("https://parkcraft.nl/user.php?id="  + user,""_self")
+                 window.open("https://parkcraft.nl/user.php?id="  + user,"_self")
              }</script>';
     }
     static function getReactionCount($mysqli, $id) {
@@ -2533,7 +2533,7 @@ class article {
         $postuseremail = user::getEmail($mysqli, $postuser);
         if (user::getReceiveReactionEmails($mysqli, $postuser) && strcmp($_SESSION['UUID'], $postuser) != 0 && strpos($email1, $postuseremail) === false) {
             $subject = 'Reactie op ' . article::getTitle($mysqli, $id);
-            $body = 'Er is een reactie geplaatst op een artikel waar jij op hebt gereageerd:<br /><hr /><br />
+            $body = language::getString($mysqli, 'RECTION_ON_REACTION').'<br /><hr /><br />
                     <strong>' . user::getNameByUUID($mysqli, $postuser) . '</strong> <br /><br />' . $reaction . '<br /><hr/>';
             user::sendEmail($mysqli, $postuseremail, $subject, $body);
             $email1 .= $postuseremail;
@@ -2547,8 +2547,8 @@ class article {
             $uuid = $row['uuid'];
             $email = user::getEmail($mysqli, $uuid);
             if (user::getReceiveReactionEmails($mysqli, $uuid) && strcmp($_SESSION['UUID'], $uuid) != 0 && strpos($email1, $email) === false) {
-                $subject = 'Reactie op ' . article::getTitle($mysqli, $id);
-                $body = 'Er is een reactie geplaatst op een artikel waar jij op hebt gereageerd:<br /><hr /><br />
+                $subject = language::getString($mysqli, 'REACTION_ON') . article::getTitle($mysqli, $id);
+                $body = language::getString($mysqli, 'RECTION_ON_REACTION').'<br /><hr /><br />
                     <strong>' . user::getNameByUUID($mysqli, $user) . '</strong> <br /><br />' . $reaction . '<br /><hr/>';
                 user::sendEmail($mysqli, $email, $subject, $body);
                 $email1 .= $email;
@@ -2574,7 +2574,7 @@ class article {
         if($count > 0) {
             return $row['post_title'];
         } else {
-            return 'Artikel verwijderd';
+            return language::getString($mysqli, 'ARTICLE_DELETED');
         }
     }
     static function loadAllReactions($mysqli, $pageid) {
@@ -2587,10 +2587,10 @@ class article {
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Gebruiker</th>
-                            <th>Artikel</th>
-                            <th>Reactie</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'ROLE_USER').'</th>
+                            <th>'.language::getString($mysqli, 'ARTICLE').'</th>
+                            <th>'.language::getString($mysqli, 'REACTION').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -2602,7 +2602,7 @@ class article {
                 echo '<td>'.$name.'</td>';
                 echo '<td><a href="article.php?id=' . $artikel . '">'.article::getTitle($mysqli, $row["article_id"]).'</a></td>';
                 echo '<td><p style="word-wrap: break-word;">'.$reactie.'</p></td>';
-                echo '<td><a href="staff.php?reactions=&id=' . $row['ID'] . '&pi=' . ($pageid + 1) . '&removereaction=" class="btn btn-danger btn-sm">Verwijder</a></td>';
+                echo '<td><a href="staff.php?reactions=&id=' . $row['ID'] . '&pi=' . ($pageid + 1) . '&removereaction=" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'REMOVE').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -2612,19 +2612,19 @@ class article {
             $count1 = mysqli_num_rows($result1);
             if($count1 > ($pageid+1)*50) {
                 if($pageid > 0) {
-                    echo '<a href="staff.php?reactions=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?reactions=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                 }
-                echo '<a href="staff.php?reactions=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                echo '<a href="staff.php?reactions=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
             } else {
                 if ($pageid > 0) {
-                    echo '<a href="staff.php?reactions=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?reactions=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                     if ($count1 > ($pageid + 1) * 50) {
-                        echo '<a href="staff.php?reactions=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                        echo '<a href="staff.php?reactions=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
                     }
                 }
             }
         } else {
-            echo '<p>Geen reacties gevonden op deze pagina.</p>';
+            echo '<p>'.language::getString($mysqli, 'NO_COMMENTS_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function loadAllPosts($mysqli, $pageid) {
@@ -2635,19 +2635,19 @@ class article {
         if ($count > 0) {
             echo '
             <ul class="nav nav-pills nav-justified">
-              <li class="active"><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
-              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+              <li class="active"><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Artikel</th>
-                            <th>Park</th>
-                            <th>Reacties</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'ARTICLE').'</th>
+                            <th>'.language::getString($mysqli, 'PARK').'</th>
+                            <th>'.language::getString($mysqli, 'COMMENTS').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -2660,7 +2660,7 @@ class article {
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
                 echo '<td><p style="word-wrap: break-word;">'.article::getReactionCount($mysqli, $id).'</p></td>';
-                echo '<td><a href="staff.php?posts=' . $id . '&removepost=&pi='.($pageid + 1).'" class="btn btn-danger btn-sm">Verwijderen</a></td>';
+                echo '<td><a href="staff.php?posts=' . $id . '&removepost=&pi='.($pageid + 1).'" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'REMOVE').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -2670,27 +2670,27 @@ class article {
             $count1 = mysqli_num_rows($result1);
             if($count1 > ($pageid+1)*50) {
                 if($pageid > 0) {
-                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                 }
-                echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
             } else {
                 if ($pageid > 0) {
-                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                     if ($count1 > ($pageid + 1) * 50) {
-                        echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                        echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
                     }
                 }
             }
         } else {
 
             echo '          <ul class="nav nav-pills nav-justified">
-                        <li class="active"><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-                        <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
-                        <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-                        <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+              <li class="active"><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
                       </ul>
                       <hr>
-                      <p>Geen artikelen gevonden op deze pagina.</p>';
+                      <p>'.language::getString($mysqli, 'NO_ARTICLES_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function loadReviewPosts($mysqli, $pageid) {
@@ -2701,18 +2701,18 @@ class article {
         if ($count > 0) {
             echo '
             <ul class="nav nav-pills nav-justified">
-              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li class="active"><a href="staff.php?reviewposts=&page=1">Review</a></li>
-              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+              <li><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li class="active"><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Artikel</th>
-                            <th>Park</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'ARTICLE').'</th>
+                            <th>'.language::getString($mysqli, 'PARK').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -2723,7 +2723,7 @@ class article {
                 echo '<tr>';
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
-                echo '<td><a href="article.php?id=' . $id . '" class="btn btn-info btn-sm">Bekijken</a></td>';
+                echo '<td><a href="article.php?id=' . $id . '" class="btn btn-info btn-sm">'.language::getString($mysqli, 'SEE').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -2733,26 +2733,26 @@ class article {
             $count1 = mysqli_num_rows($result1);
             if($count1 > ($pageid+1)*50) {
                 if($pageid > 0) {
-                    echo '<a href="staff.php?reviewposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                 }
-                echo '<a href="staff.php?reviewposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
             } else {
                 if ($pageid > 0) {
-                    echo '<a href="staff.php?reviewposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                     if ($count1 > ($pageid + 1) * 50) {
-                        echo '<a href="staff.php?reviewposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                        echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
                     }
                 }
             }
         } else {
             echo '<ul class="nav nav-pills nav-justified">
-              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li class="active"><a href="staff.php?reviewposts=&page=1">Review</a></li>
-              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+              <li><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li class="active"><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
-            <p>Geen artikelen gevonden op deze pagina.</p>';
+            <p>'.language::getString($mysqli, 'NO_ARTICLES_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function loadRejectedPosts($mysqli, $pageid) {
@@ -2763,18 +2763,18 @@ class article {
         if ($count > 0) {
             echo '
             <ul class="nav nav-pills nav-justified">
-              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
-              <li class="active"><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+              <li><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li class="active"><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Artikel</th>
-                            <th>Park</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'ARTICLE').'</th>
+                            <th>'.language::getString($mysqli, 'PARK').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -2785,7 +2785,7 @@ class article {
                 echo '<tr>';
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
-                echo '<td><a href="article.php?id=' . $id . '" class="btn btn-info btn-sm">Bekijken</a></td>';
+                echo '<td><a href="article.php?id=' . $id . '" class="btn btn-info btn-sm">'.language::getString($mysqli, 'SEE').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -2795,26 +2795,26 @@ class article {
             $count1 = mysqli_num_rows($result1);
             if($count1 > ($pageid+1)*50) {
                 if($pageid > 0) {
-                    echo '<a href="staff.php?rejectedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                 }
-                echo '<a href="staff.php?rejectedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
             } else {
                 if ($pageid > 0) {
-                    echo '<a href="staff.php?rejectedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                     if ($count1 > ($pageid + 1) * 50) {
-                        echo '<a href="staff.php?rejectedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                        echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
                     }
                 }
             }
         } else {
             echo '<ul class="nav nav-pills nav-justified">
-              <li><a href="/staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li><a href="/staff.php?reviewposts=&page=1">Review</a></li>
-              <li class="active"><a href="/staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li><a href="/staff.php?deletedposts=&page=1" class="active">Verwijderd</a></li>
+              <li><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li class="active"><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
-            <p>Geen artikelen gevonden op deze pagina.</p>';
+            <p>'.language::getString($mysqli, 'NO_ARTICLES_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function loadDeletedPosts($mysqli, $pageid) {
@@ -2825,19 +2825,19 @@ class article {
         if ($count > 0) {
             echo '
             <ul class="nav nav-pills nav-justified">
-              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
-              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li class="active"><a href="staff.php?deletedposts=&page=1">Verwijderd</a></li>
+              <li><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li class="active"><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Artikel</th>
-                            <th>Park</th>
-							<th>Reacties</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'ARTICLE').'</th>
+                            <th>'.language::getString($mysqli, 'PARK').'</th>
+                            <th>'.language::getString($mysqli, 'COMMENTS').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -2850,7 +2850,7 @@ class article {
                 echo '<td><a href="article.php?id=' . $id . '">'.$title.'</a></td>';
                 echo '<td><a href="park.php?id='.$parkid.'">'.park::getName($mysqli, $parkid).'</a></td>';
                 echo '<td><p style="word-wrap: break-word;">'.article::getReactionCount($mysqli, $id).'</p></td>';
-                echo '<td><a href="staff.php?posts=' . $id . '&undoremovepost=&pi='.($pageid + 1).'" class="btn btn-info btn-sm">Verwijderen ongedaan maken</a></td>';
+                echo '<td><a href="staff.php?posts=' . $id . '&undoremovepost=&pi='.($pageid + 1).'" class="btn btn-info btn-sm">'.language::getString($mysqli, 'DELETE_UNDO').'</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -2860,26 +2860,26 @@ class article {
             $count1 = mysqli_num_rows($result1);
             if($count1 > ($pageid+1)*50) {
                 if($pageid > 0) {
-                    echo '<a href="staff.php?deletedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                 }
-                echo '<a href="staff.php?deletedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
             } else {
                 if ($pageid > 0) {
-                    echo '<a href="staff.php?deletedposts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">Terug</a>';
+                    echo '<a href="staff.php?posts=&page=' . ($pageid) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'PREVIOUS').'</a>';
                     if ($count1 > ($pageid + 1) * 50) {
-                        echo '<a href="staff.php?deletedposts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">Volgende</a>';
+                        echo '<a href="staff.php?posts=&page=' . ($pageid + 2) . '" class="btn btn-danger btn-sm">'.language::getString($mysqli, 'NEXT').'</a>';
                     }
                 }
             }
         } else {
             echo '<ul class="nav nav-pills nav-justified">
-              <li><a href="staff.php?posts=&page=1">Actieve Posts</a></li>
-              <li><a href="staff.php?reviewposts=&page=1">Review</a></li>
-              <li><a href="staff.php?rejectedposts=&page=1">Afgewezen</a></li>
-              <li class="active"><a href="staff.php?deletedposts=&page=1" class="active">Verwijderd</a></li>
+              <li><a href="staff.php?posts=&page=1">'.language::getString($mysqli, 'ACTIVE_POSTS').'</a></li>
+              <li><a href="staff.php?reviewposts=&page=1">'.language::getString($mysqli, 'REVIEW').'</a></li>
+              <li><a href="staff.php?rejectedposts=&page=1">'.language::getString($mysqli, 'REJECTED').'</a></li>
+              <li class="active"><a href="staff.php?deletedposts=&page=1">'.language::getString($mysqli, 'REMOVED').'</a></li>
             </ul>
             <hr>
-            <p>Geen artikelen gevonden op deze pagina.</p>';
+            <p>'.language::getString($mysqli, 'NO_ARTICLES_FOUND_ON_THIS_PAGE').'</p>';
         }
     }
     static function like($mysqli, $articleid, $uuid) {
@@ -2936,7 +2936,7 @@ class article {
         ';
             }
         } else {
-            echo '<p>Geen likes.</p>';
+            echo '<p>'.language::getString($mysqli, 'NO_LIKES').'</p>';
         }
     }
 }
@@ -2955,9 +2955,9 @@ class park {
             if($count1 > 0) {
                 return $row1['email'];
             }
-            return 'error';
+            return language::getString($mysqli, 'ERROR');
         }
-        return 'error';
+        return language::getString($mysqli, 'ERROR');
     }
     static function getUUIDFromStaff($mysqli, $id) {
         $sql="SELECT * FROM pco_parks_staff WHERE ID='$id'";
@@ -3026,9 +3026,9 @@ class park {
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Naam</th>
-                            <th>Prefix</th>
-                            <th>Opties</th>
+                            <th>'.language::getString($mysqli, 'USER_NAME').'</th>
+                            <th>'.language::getString($mysqli, 'USER_PREFIX').'</th>
+                            <th>'.language::getString($mysqli, 'USER_OPTIONS').'</th>
                         </tr>
                     </thead>';
             echo '<tbody>';
@@ -3045,41 +3045,41 @@ class park {
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Staflid wijzigen</h4>
+                                <h4 class="modal-title">'.language::getString($mysqli, 'CHANGE_MEMBER').'</h4>
                               </div>
                               <div class="modal-body">
                                 <form name="edit" id="register" action="'.htmlspecialchars($_SERVER['PHP_SELF']).'" method="post" autocomplete="off" class="form-horizontal">
                                     <p>'.user::getNameByUUID($mysqli, $row["uuid"]).'</p>
                                     <span>Mag deze persoon artikelen schrijven?</span>
                                     <select name="cw" class="form-control">
-                                      <option value="1" '; if($row["can_write"] == 1) { echo "selected"; } echo '>Ja</option>
-                                      <option value="0" '; if($row["can_write"] == 0) { echo "selected"; } echo '>Nee</option>
+                                      <option value="1" '; if($row["can_write"] == 1) { echo "selected"; } echo '>'.language::getString($mysqli, 'YES').'</option>
+                                      <option value="0" '; if($row["can_write"] == 0) { echo "selected"; } echo '>'.language::getString($mysqli, 'NO').'</option>
                                     </select><br />
                                     <span>Mag deze persoon instellingen veranderen?</span>
                                     <select name="ces" class="form-control">
-                                      <option value="1" '; if($row["can_edit_settings"] == 1) { echo "selected"; } echo '>Ja</option>
-                                      <option value="0" '; if($row["can_edit_settings"] == 0) { echo "selected"; } echo '>Nee</option>
+                                      <option value="1" '; if($row["can_edit_settings"] == 1) { echo "selected"; } echo '>'.language::getString($mysqli, 'YES').'</option>
+                                      <option value="0" '; if($row["can_edit_settings"] == 0) { echo "selected"; } echo '>'.language::getString($mysqli, 'NO').'</option>
                                     </select><br />
                                     <span>Mag deze persoon staf beheren?</span>
                                     <select name="cms" class="form-control">
-                                      <option value="1" '; if($row["can_manage_staff"] == 1) { echo "selected"; } echo '>Ja</option>
-                                      <option value="0" '; if($row["can_manage_staff"] == 0) { echo "selected"; } echo '>Nee</option>
+                                      <option value="1" '; if($row["can_manage_staff"] == 1) { echo "selected"; } echo '>'.language::getString($mysqli, 'YES').'</option>
+                                      <option value="0" '; if($row["can_manage_staff"] == 0) { echo "selected"; } echo '>'.language::getString($mysqli, 'NO').'</option>
                                     </select><br />
                                     <span>Mag deze persoon attracties beheren?</span>
                                     <select name="cmr" class="form-control">
-                                      <option value="1" '; if($row["can_manage_rides"] == 1) { echo "selected"; } echo '>Ja</option>
-                                      <option value="0" '; if($row["can_manage_rides"] == 0) { echo "selected"; } echo '>Nee</option>
+                                      <option value="1" '; if($row["can_manage_rides"] == 1) { echo "selected"; } echo '>'.language::getString($mysqli, 'YES').'</option>
+                                      <option value="0" '; if($row["can_manage_rides"] == 0) { echo "selected"; } echo '>'.language::getString($mysqli, 'NO').'</option>
                                     </select><br />
                                     <span>Mag deze persoon vacatures beheren?</span>
                                     <select name="cmj" class="form-control">
-                                      <option value="1" '; if($row["can_manage_jobs"] == 1) { echo "selected"; } echo '>Ja</option>
-                                      <option value="0" '; if($row["can_manage_jobs"] == 0) { echo "selected"; } echo '>Nee</option>
+                                      <option value="1" '; if($row["can_manage_jobs"] == 1) { echo "selected"; } echo '>'.language::getString($mysqli, 'YES').'</option>
+                                      <option value="0" '; if($row["can_manage_jobs"] == 0) { echo "selected"; } echo '>'.language::getString($mysqli, 'NO').'</option>
                                     </select><br />
                                     <input type="hidden" value="'.$parkid.'" name="id"/>
                                     <input type="hidden" value="'.$row["uuid"].'" name="useruuid"/>
                                     <br />
                                     <span>Welke rank heeft deze persoon?</span><input type="text" name="prefix" value="'.$row["prefix"].'" class="form-control" maxlength="20"/><br />
-                                    <button type="submit" class="btn btn-raised btn-success" name="edit" id="postbutton">Opslaan
+                                    <button type="submit" class="btn btn-raised btn-success" name="edit" id="postbutton">'.language::getString($mysqli, 'SAVE').'
                                                 </button>
                                 </form>
                               </div>
