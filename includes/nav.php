@@ -23,6 +23,8 @@
                 <li class="dropdown">
                     <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo language::getString($mysqli, 'NAV_PARKS'); ?><b class="caret"></b></a>
                     <ul class="dropdown dropdown-menu multi-level">
+                        <li><a href="parklist.php"><?php echo language::getString($mysqli, 'NAV_PARKLIST'); ?></a></li>
+                        <li class="divider"></li>
                         <?php nav::parks($mysqli, $_SESSION['UUID']); ?>
                         <li <?php if(strcmp($active, "parkrequest") == 0) { echo 'class="parkrequest"';}?>><a href="./parkrequest.php"><?php echo language::getString($mysqli, 'NAV_PARK_REQUEST'); ?></a></li>
                     </ul>
@@ -36,7 +38,6 @@
                         <li><a href="#" class="notallowed"><?php echo language::getString($mysqli, 'NAV_POTM'); ?></a></li>
                         <li><a href="videos.php"><?php echo language::getString($mysqli, 'NAV_VIDEOS'); ?></a></li>
                         <li><a href="#" class="notallowed"><?php echo language::getString($mysqli, 'NAV_EVENTS'); ?></a></li>
-                        <li><a href="parklist.php"><?php echo language::getString($mysqli, 'NAV_PARKLIST'); ?></a></li>
                         <?php if(parkcraft::IsAuthor($mysqli, $_SESSION['UUID'])) {?>
                             <li class="divider"></li>
                                 <a href="#" class="dropdown-header"><li class="dropdown-header"><?php echo language::getString($mysqli, 'NAV_AUTORS'); ?></li></a>
