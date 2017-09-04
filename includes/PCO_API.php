@@ -3853,7 +3853,7 @@ class common {
         $pms = json_decode($out,true);
         $url=$pms['data']['link'];
         if($url!=""){
-            return str_replace("http","https",$url);;
+            return $url;
         }else{
             return $pms['data']['error'];
         }
