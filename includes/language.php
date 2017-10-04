@@ -104,6 +104,7 @@ class language
                 'ACTIVE_POSTS' => 'Actieve Posts',
                 'REVIEW' => 'Review',
                 'REJECTED' => 'Afgewezen',
+                'REMOVED' => 'Verwijderd',
                 'PARK' => 'Park',
                 'COMMENTS' => 'Reacties',
 

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e370ebf-8419-4472-89e5-23408bfd8375" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/PCO_API.php" afterPath="$PROJECT_DIR$/includes/PCO_API.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/language.php" afterPath="$PROJECT_DIR$/includes/language.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="PCO_API.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PCO_API.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/PCO_API.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="3855" column="24" lean-forward="true" selection-start-line="3855" selection-start-column="24" selection-end-line="3855" selection-end-column="24" />
+            <state relative-caret-position="55440">
+              <caret line="2640" column="98" lean-forward="false" selection-start-line="2640" selection-start-column="91" selection-end-line="2640" selection-end-column="98" />
               <folding>
                 <marker date="1504549304026" expanded="true" signature="268:339" ph="SELECT * FRO... pco_users" />
                 <marker date="1504549304026" expanded="true" signature="1329:1375" ph="SELECT * FRO... pco_users" />
@@ -714,6 +714,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="API.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="221" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="staff.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/staff.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6237">
+              <caret line="297" column="64" lean-forward="false" selection-start-line="297" selection-start-column="59" selection-end-line="297" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="applications.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -756,38 +776,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="language.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="language.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/language.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="147">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="129" selection-end-column="1" />
+              <folding>
+                <marker date="1504549718220" expanded="true" signature="4914:4972" ph="SELECT * FRO... pco_users" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="phpimports.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/phpimports.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectdb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/connectdb.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLPurifier.standalone.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/HTMLPurifier.standalone.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -823,6 +825,9 @@
       <find>getString</find>
       <find>sendActivationMail</find>
       <find>mail</find>
+      <find>upload</find>
+      <find>posts</find>
+      <find>loadallposts</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -855,10 +860,10 @@
         <option value="$PROJECT_DIR$/chat-api.php" />
         <option value="$PROJECT_DIR$/includes/CHAT_API.php" />
         <option value="$PROJECT_DIR$/includes/FEED_API.php" />
-        <option value="$PROJECT_DIR$/includes/language.php" />
         <option value="$PROJECT_DIR$/park.php" />
         <option value="$PROJECT_DIR$/includes/nav.php" />
         <option value="$PROJECT_DIR$/includes/PCO_API.php" />
+        <option value="$PROJECT_DIR$/includes/language.php" />
       </list>
     </option>
   </component>
@@ -900,7 +905,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -923,7 +928,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1038,18 +1043,20 @@
       <workItem from="1504030324745" duration="15000" />
       <workItem from="1504271026599" duration="893000" />
       <workItem from="1504274515747" duration="1218000" />
-      <workItem from="1504549269927" duration="43000" />
+      <workItem from="1504549269927" duration="1148000" />
+      <workItem from="1505557755159" duration="420000" />
+      <workItem from="1505902742587" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24292000" />
+    <option name="totallyTimeSpent" value="25831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24479167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2551,13 +2558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3945">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/author.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2641">
@@ -2670,13 +2670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/staff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6972">
-          <caret line="332" column="64" lean-forward="false" selection-start-line="332" selection-start-column="64" selection-end-line="332" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3696">
@@ -2772,7 +2765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7203">
           <caret line="343" column="16" lean-forward="false" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2788,19 +2780,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/imports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/language.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2850,10 +2833,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/staff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6237">
+          <caret line="297" column="64" lean-forward="false" selection-start-line="297" selection-start-column="59" selection-end-line="297" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/PCO_API.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="3855" column="24" lean-forward="true" selection-start-line="3855" selection-start-column="24" selection-end-line="3855" selection-end-column="24" />
+        <state relative-caret-position="55440">
+          <caret line="2640" column="98" lean-forward="false" selection-start-line="2640" selection-start-column="91" selection-end-line="2640" selection-end-column="98" />
           <folding>
             <marker date="1504549304026" expanded="true" signature="268:339" ph="SELECT * FRO... pco_users" />
             <marker date="1504549304026" expanded="true" signature="1329:1375" ph="SELECT * FRO... pco_users" />
@@ -3544,6 +3535,24 @@
             <marker date="1504549304026" expanded="true" signature="270878:270948" ph="SELECT * FRO... pco_reaction" />
             <marker date="1504549304026" expanded="true" signature="271779:271826" ph="SELECT * FRO... pco_plugins" />
             <marker date="1504549304026" expanded="true" signature="273149:273174" ph="SELECT * FRO... pco_plugins" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="221" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/language.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="129" selection-end-column="1" />
+          <folding>
+            <marker date="1504549718220" expanded="true" signature="4914:4972" ph="SELECT * FRO... pco_users" />
           </folding>
         </state>
       </provider>
